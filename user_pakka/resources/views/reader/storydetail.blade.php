@@ -7,6 +7,7 @@
 <script>
     window.APP = {
         storyId: {{ $story->id }},
+        userId: {{$story->user_id}},
         liked: {{ $liked ? 'true' : 'false' }},
         isFollowing: {{ $isFollowing ? 'true' : 'false' }},
         csrf: "{{ csrf_token() }}"

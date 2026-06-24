@@ -8,19 +8,15 @@ use Illuminate\Support\Facades\Auth;
 
 class FollowController extends Controller
 {
-    public function toggleFollow($id)
+    public function toggle($id)
     {
-        if (!Auth::check()) {
-            return response()->json(['message' => 'Login required'], 401);
+        if (!auth()->check()) {
+            return response()->json([
+                'message' => 'Login required'
+            ], 401);
         }
 
-        $userId = Auth::id();
-
-        if ($userId == $id) {
-            return response()->json(['message' => 'Cannot follow yourself'], 400);
-        }
-
-        $follow = Follow::where('follower_id', $userId)
+        $follow = Follow::where('follower_id', auth()->id())
             ->where('following_id', $id)
             ->first();
 
@@ -34,7 +30,7 @@ class FollowController extends Controller
         }
 
         Follow::create([
-            'follower_id' => $userId,
+            'follower_id' => auth()->id(),
             'following_id' => $id
         ]);
 

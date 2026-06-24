@@ -29,10 +29,10 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!likeBtn) return;
 
         if (liked) {
-            likeText.innerText = "Liked";
+            likeText.innerText = likeText.dataset.liked;
             likeBtn.style.background = "#fee2e2";
         } else {
-            likeText.innerText = "Like";
+            likeText.innerText = likeText.dataset.like;
             likeBtn.style.background = "#f3f4f6";
         }
     }
