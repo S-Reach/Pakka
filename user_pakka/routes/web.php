@@ -84,9 +84,7 @@ Route::post('/story/{id}/like', [StoryController::class, 'toggleLike'])
         ->name('story.like');
 
 //follow 
-Route::post('/follow/{id}', [FollowController::class, 'toggleFollow'])
-    ->name('user.follow');
-
+Route::post('/user/{id}/follow', [FollowController::class, 'toggle']);
 
 //Comment routes
 Route::post('/story/{story}/comment',
