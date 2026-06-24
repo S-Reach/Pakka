@@ -357,7 +357,7 @@
                @if(!empty($story->warnings))
                     <div class="info-box warning-box">
 
-                        <div class="info-title">⚠️ Content Warning</div>
+                        <div class="info-title">⚠️ {{ __('ui.content_warning') }}</div>
 
                         <ul style="margin:0;padding-left:18px;">
                             @foreach($story->warnings as $warning)
@@ -375,7 +375,7 @@
 
                 @if($story->is_fanfiction)
                     <div class="info-box verified-box">
-                        <div class="info-title">📢 Fanfiction</div>
+                        <div class="info-title">📢 {{ __('ui.fanfiction') }}</div>
                     </div>
                 @endif
 
@@ -389,8 +389,7 @@
             <div class="chapter-box">
 
                 <div class="chapter-title">
-                    Chapters
-                </div>
+                    {{ __('ui.chapters') }}
 
                 @forelse($story->chapters->where('story_progress', 'published') as $chapter)
 
@@ -466,7 +465,7 @@
                 <div class="comment-box">
 
                     <div class="comment-title">
-                        Comments ({{ $story->comments->count() }})
+                        {{ __('ui.comments') }} ({{ $story->comments->count() }})
                     </div>
 
                     <!-- COMMENT FORM -->
@@ -501,7 +500,7 @@
                                 <div class="comment-action">
 
                                     <button type="submit" class="post-btn">
-                                        Post Comment
+                                        {{ __('ui.post_comment') }}
                                     </button>
 
                                 </div>
@@ -566,7 +565,7 @@
 </form>
                                     <!-- REPLY BUTTON -->
                                     <span onclick="toggleReply({{ $comment->id }})">
-                                        Reply
+                                        {{ __('ui.reply') }}
                                     </span>
                                     <!-- REPORT -->
                                     <form action="{{ route('comment.report', $comment->id) }}"
@@ -575,7 +574,7 @@
                                         <button type="button"
                                                 onclick="openCommentReportPopup({{ $comment->id }}, `{{ $comment->comment }}`)"
                                                 style="border:none;background:none;cursor:pointer;color:red;">
-                                            Report
+                                            {{ __('ui.report') }}
                                         </button>
                                     </form>
                                 </div>
@@ -586,7 +585,7 @@
                                         <!-- HEADER -->
                                         <div class="report-header">
                                             <div class="report-title">
-                                                ⚠️ Report Comment
+                                                ⚠️ {{ __('ui.report_comment') }}
                                             </div>
                                             <span class="close-btn" onclick="closeCommentReportPopup()">×</span>
                                         </div>
