@@ -1,0 +1,281 @@
+body{
+    background:#f5f6fa;
+    font-family:Arial,sans-serif;
+}
+
+.wrapper{
+    width:90%;
+    margin:30px auto;
+}
+
+.back a{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-size:14px;
+    font-weight:600;
+    color:#374151;
+    text-decoration:none;
+    background:#fff;
+    padding:10px 14px;
+    border-radius:12px;
+    border:1px solid #e5e7eb;
+    box-shadow:0 2px 8px rgba(0,0,0,0.04);
+    transition:.2s ease;
+}
+
+.back a:hover{
+    background:#f1f5f9;
+}
+
+.page-title{
+    font-size:32px;
+    font-weight:bold;
+    margin-top:10px;
+    color:#111827;
+}
+
+.subtitle{
+    color:#777;
+    margin-top:5px;
+    margin-bottom:20px;
+}
+
+.card{
+    background:#fff;
+    border-radius:16px;
+    padding:25px;
+    border:1px solid #e5e7eb;
+}
+
+.card-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.btn-dark{
+    background:#111827;
+    color:#fff;
+    border:none;
+    padding:10px 16px;
+    border-radius:10px;
+    cursor:pointer;
+    text-decoration:none;
+    font-weight:600;
+    transition:.2s;
+}
+
+.btn-dark:hover{
+    background:#000;
+}
+
+.empty-box{
+    border:2px dashed #ddd;
+    border-radius:16px;
+    text-align:center;
+    padding:60px 30px;
+    margin-top:20px;
+    color:#777;
+}
+
+.chapter-item{
+    border-bottom:1px solid #eee;
+    padding:18px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.chapter-item:last-child{
+    border-bottom:none;
+}
+
+/* BADGES */
+.badge{
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:12px;
+    margin-left:10px;
+    font-weight:600;
+}
+
+.badge-draft{
+    background:#fff3cd;
+    color:#856404;
+}
+
+.badge-published{
+    background:#d4f5e1;
+    color:#1a7f37;
+}
+
+.badge-pending{
+    background:#e0f2fe;
+    color:#075985;
+}
+
+.badge-approved{
+    background:#d4f5e1;
+    color:#1a7f37;
+}
+
+.badge-rejected{
+    background:#fee2e2;
+    color:#991b1b;
+}
+
+.actions{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.actions a{
+    font-size:14px;
+    color:#111827;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.publish-btn{
+    border:none;
+    background:#16a34a;
+    color:#fff;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:13px;
+    font-weight:600;
+    transition:.2s;
+}
+
+.publish-btn:hover{
+    background:#15803d;
+}
+
+/* POPUP */
+.popup-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+    animation:fadeIn .25s ease;
+}
+
+.popup-box{
+    width:420px;
+    background:#fff;
+    border-radius:22px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,0.18);
+    animation:popupShow .25s ease;
+}
+
+.popup-icon{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.popup-box h2{
+    margin:0;
+    margin-bottom:12px;
+    font-size:28px;
+    color:#111827;
+}
+
+.popup-box p{
+    color:#6b7280;
+    line-height:1.7;
+    margin-bottom:25px;
+    font-size:15px;
+}
+
+.popup-box button{
+    background:#111827;
+    color:#fff;
+    border:none;
+    padding:12px 22px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:600;
+    transition:.2s;
+}
+
+.popup-box button:hover{
+    background:#000;
+}
+
+.pagination-wrapper {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Laravel pagination styling override */
+.pagination {
+    display: flex;
+    gap: 6px;
+    padding: 0;
+    list-style: none;
+}
+
+.pagination li {
+    display: inline-block;
+}
+
+.pagination li a,
+.pagination li span {
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    color: #374151;
+    background: #fff;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+/* Hover */
+.pagination li a:hover {
+    background: #111827;
+    color: #fff;
+    border-color: #111827;
+}
+
+/* Active page */
+.pagination .active span {
+    background: #111827;
+    color: #fff;
+    border-color: #111827;
+}
+
+/* Disabled */
+.pagination .disabled span {
+    opacity: 0.5;
+}
+
+@keyframes popupShow{
+    from{
+        transform:scale(.9);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}

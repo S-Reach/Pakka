@@ -1,0 +1,257 @@
+.profile-page-wrapper{
+    display:flex;
+    gap:30px;
+    padding:30px;
+    background:#f5f6fa;
+    font-family:Segoe UI;
+}
+
+/* LEFT */
+.profile-left{ width:300px; }
+
+.profile-card{
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.avatar{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    overflow:hidden;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#e5e7eb;
+}
+
+.avatar-img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.avatar-text{
+    font-size:28px;
+    font-weight:bold;
+    color:#374151;
+}
+
+.username{ color:gray; font-size:14px; }
+
+.follow-btn{
+    width:100%;
+    padding:10px;
+    background:#111827;
+    color:white;
+    border:none;
+    border-radius:8px;
+    margin:15px 0;
+    cursor:pointer;
+}
+
+/* RIGHT */
+.profile-right{ flex:1; }
+
+/* TABS */
+.tabs{
+    display:flex;
+    gap:10px;
+    background:#e5e7eb;
+    padding:5px;
+    border-radius:30px;
+    margin-bottom:20px;
+    overflow-x:auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar { display:none; }
+
+.tab-btn{
+    flex:1;
+    border:none;
+    background:none;
+    padding:10px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:600;
+    white-space:nowrap;
+}
+
+.tab-btn.active{ background:white; }
+
+/* CONTENT */
+.tab-content{ display:none; }
+.tab-content.active{ display:block; }
+
+/* ===== STORIES ===== */
+.story-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.story-card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.story-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* COVER (image + no image SAME SIZE) */
+.story-cover{
+    width:100%;
+    height:250px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#e5e7eb;
+    overflow:hidden;
+}
+
+.story-cover img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+/* BODY */
+.story-body{
+    padding:15px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+.story-body h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.story-body p{
+    font-size:14px;
+    color:#555;
+    flex:1;
+}
+
+/* USERS */
+.user-list{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.user-item{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.user-info{
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+
+.user-avatar{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#ddd;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Tablet */
+@media (max-width: 992px){
+    .profile-page-wrapper{
+        flex-direction:column;
+        padding:20px;
+    }
+    .profile-left,
+    .profile-right{
+        width:100%;
+    }
+    .story-grid{
+        grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    }
+    .story-cover{
+        height:220px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+    .profile-page-wrapper{
+        padding:15px;
+        gap:20px;
+    }
+    .tab-btn{
+        flex:0 0 auto;
+        font-size:13px;
+        padding:8px 14px;
+    }
+    .story-grid{
+        grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+        gap:12px;
+    }
+    .story-cover{
+        height:200px;
+    }
+    .user-item{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+    .follow-btn{
+        width:100%;
+    }
+}
+
+/* Small Mobile */
+@media (max-width:480px){
+    .profile-page-wrapper{
+        padding:10px;
+    }
+    .profile-card{
+        padding:15px;
+    }
+    .avatar{
+        width:70px;
+        height:70px;
+    }
+    .story-grid{
+        grid-template-columns:1fr;
+    }
+    .story-cover{
+        height:180px;
+    }
+    .tab-btn{
+        font-size:12px;
+        padding:7px 10px;
+    }
+    h2{
+        font-size:20px;
+    }
+}

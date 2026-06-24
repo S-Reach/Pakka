@@ -1,0 +1,133 @@
+body{
+    background:#f5f6fa;
+    font-family:'Segoe UI',sans-serif;
+}
+
+.notification-container{
+    max-width:850px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.notification-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.notification-header h1{
+    font-size:32px;
+    margin:0;
+}
+
+/* 🔥 UNREAD COUNT BADGE */
+.unread-count{
+    background:#7c3aed;
+    color:white;
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* 🔥 CARD BASE */
+.notification-card{
+    background:#ffffff;
+    border-radius:15px;
+    padding:18px;
+    margin-bottom:15px;
+    border:1px solid #ececec;
+    transition:.3s;
+    opacity:0.75; /* read default faded */
+}
+
+/* 🔥 UNREAD STYLE */
+.notification-card.unread{
+    background:#f3ecff;
+    border-left:5px solid #7c3aed;
+    opacity:1;
+}
+
+.notification-card.read{
+    background:#ffffff;
+    border-left:5px solid #d1d5db;
+    opacity:.7;
+}
+
+.notification-card.read .notification-title{
+    color:#6b7280;
+}
+
+/* HOVER */
+.notification-card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+    opacity:1;
+}
+
+/* TITLE */
+.notification-heading{
+    font-size:17px;
+    font-weight:700;
+    color:#111827;
+}
+
+.notification-message{
+    margin-top:8px;
+    color:#6b7280;
+    font-size:14px;
+    line-height:1.6;
+}
+
+
+/* BADGES */
+.badge{
+    display:inline-block;
+    padding:4px 10px;
+    border-radius:20px;
+    color:white;
+    font-size:12px;
+}
+
+.badge-approved{
+    background:#22c55e;
+}
+
+.badge-rejected{
+    background:#ef4444;
+}
+
+.badge-new{
+    background:#7c3aed;
+}
+
+.badge-warning{
+    background:#f59e0b;
+}
+
+/* 🔥 REASON BOX (IMPROVED) */
+.notification-reason{
+    background:#fff1f2;
+    color:#b91c1c;
+    padding:12px;
+    border-left:4px solid #ef4444;
+    border-radius:8px;
+    margin-top:10px;
+    font-size:14px;
+}
+
+/* TIME */
+.notification-time{
+    font-size:12px;
+    color:#888;
+    margin-top:10px;
+}
+
+/* EMPTY */
+.empty-notification{
+    background:white;
+    padding:40px;
+    text-align:center;
+    border-radius:15px;
+}

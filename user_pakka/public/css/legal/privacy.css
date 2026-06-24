@@ -1,0 +1,80 @@
+.legal-container{
+    width:80%;
+    max-width:900px;
+    margin:40px auto;
+    padding:35px;
+    background:#fff;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    font-family:'Segoe UI',sans-serif;
+}
+
+.legal-title{
+    font-size:32px;
+    color:#111827;
+    margin-bottom:8px;
+}
+
+.legal-date{
+    color:#6b7280;
+    margin-bottom:30px;
+    font-size:14px;
+}
+
+.legal-section{
+    margin-bottom:28px;
+}
+
+.legal-section h3{
+    font-size:20px;
+    margin-bottom:12px;
+    color:#7c3aed;
+}
+
+.legal-section p{
+    line-height:1.8;
+    color:#374151;
+}
+
+.legal-section ul{
+    margin-left:22px;
+    line-height:1.9;
+    color:#374151;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:20px;
+    text-decoration:none;
+    background:#7c3aed;
+    color:#fff;
+    padding:10px 18px;
+    border-radius:10px;
+    font-weight:600;
+}
+
+.back-btn:hover{
+    opacity:.9;
+}
+
+@media(max-width:768px){
+    .legal-container{
+        width:92%;
+        padding:25px;
+    }
+    .legal-title{
+        font-size:28px;
+    }
+}
+
+@media(max-width:480px){
+    .legal-container{
+        padding:20px;
+    }
+    .legal-title{
+        font-size:24px;
+    }
+    .legal-section h3{
+        font-size:18px;
+    }
+}

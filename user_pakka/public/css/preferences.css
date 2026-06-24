@@ -1,0 +1,253 @@
+body{
+    font-family: 'Battambang', Arial, sans-serif;
+    background:#f5f5f5;
+    margin:0;
+}
+
+.container{
+    width:92%;
+    max-width:900px;
+    margin:40px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    box-sizing:border-box;
+    box-shadow:0 8px 25px rgba(0,0,0,0.06);
+}
+
+.options{
+    display:flex;
+    gap:15px;
+    margin:15px 0;
+    flex-wrap:wrap;
+}
+
+.card{
+    flex:1;
+    min-width:180px;
+    padding:20px;
+    border:2px solid #ddd;
+    border-radius:12px;
+    cursor:pointer;
+    text-align:center;
+    transition:0.2s;
+}
+
+.card:hover{
+    transform:translateY(-2px);
+}
+
+.active{
+    border-color:blue;
+}
+
+.dark{
+    background:#111;
+    color:#fff;
+}
+
+.sepia{
+    background:#f4ecd8;
+}
+
+.slider{
+    width:100%;
+}
+
+.preview{
+    margin-top:20px;
+    padding:20px;
+    border-radius:14px;
+    border:1px solid #ddd;
+    transition:0.2s;
+    line-height:1.9;
+    overflow-wrap:break-word;
+}
+
+.btn{
+    width:100%;
+    padding:15px;
+    margin-top:25px;
+    background:#000;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.back-btn{
+    background:#fff;
+    border:1px solid #ddd;
+    padding:10px 16px;
+    border-radius:10px;
+    font-size:14px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.back-btn:hover{
+    transform:translateY(-1px);
+    background:#fafafa;
+}
+
+/* SIZE BUTTONS */
+.size-btn{
+    padding:10px 15px;
+    border:none;
+    border-radius:6px;
+    background:#333;
+    color:#fff;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.size-btn:hover{
+    background:#000;
+}
+
+.size-btn:active{
+    transform:scale(0.95);
+}
+
+/* POPUP */
+.popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 18px;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    display: none;
+    z-index: 9999;
+    animation: slideIn 0.3s ease;
+}
+
+.popup.success {
+    background: #22c55e;
+}
+
+.popup.error {
+    background: #ef4444;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ==================================
+   TABLET
+================================== */
+@media (max-width:1024px){
+    .container{
+        width:94%;
+        padding:25px;
+    }
+}
+
+/* ==================================
+   TABLET PORTRAIT
+================================== */
+@media (max-width:768px){
+    .container{
+        width:95%;
+        margin:25px auto;
+        padding:22px;
+    }
+    h1{
+        font-size:30px;
+    }
+    h2{
+        font-size:22px;
+    }
+    .options{
+        flex-direction:column;
+    }
+    .card{
+        width:100%;
+        min-width:0;
+    }
+    .preview{
+        padding:18px;
+    }
+
+}
+
+/* ==================================
+   MOBILE
+================================== */
+@media (max-width:576px){
+    .container{
+        width:95%;
+        margin:18px auto;
+        padding:18px;
+        border-radius:16px;
+    }
+    h1{
+        font-size:26px;
+    }
+    h2{
+        font-size:20px;
+        margin-top:24px;
+    }
+    .card{
+        padding:16px;
+        font-size:14px;
+    }
+    .preview{
+        padding:16px;
+        font-size:15px;
+    }
+    .btn{
+        padding:13px;
+    }
+    /* Slider row */
+    .slider{
+        flex:1;
+    }
+
+}
+/* ==================================
+   SMALL PHONES
+================================== */
+
+@media (max-width:480px){
+    h1{
+        font-size:24px;
+    }
+    h2{
+        font-size:18px;
+    }
+    .container{
+        width:94%;
+        padding:15px;
+    }
+    .card{
+        padding:14px;
+        font-size:13px;
+    }
+    .preview{
+        padding:14px;
+    }
+    /* Font size controls */
+    div[style*="display:flex; align-items:center; gap:10px"]{
+        flex-wrap:wrap;
+    }
+    .size-btn{
+        width:55px;
+        padding:10px;
+    }
+    #sizeLabel{
+        width:100%;
+        text-align:center;
+        margin-top:8px;
+        font-weight:600;
+    }
+}

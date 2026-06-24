@@ -1,0 +1,315 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#ede9fe,#f8fafc);
+}
+
+.container{
+    width:100%;
+    max-width:550px;
+    padding:40px;
+    border-radius:20px;
+    background:#fff;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+/* LOGO */
+
+.logo{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.logo-circle{
+    width:60px;
+    height:60px;
+    margin:auto;
+    border-radius:50%;
+    background:linear-gradient(135deg,#7c3aed,#a855f7);
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+h1{
+    margin:12px 0 5px;
+    font-size:26px;
+}
+
+.subtitle{
+    color:#6b7280;
+    font-size:14px;
+}
+
+h2{
+    margin-top:25px;
+    font-size:22px;
+}
+
+.desc{
+    color:#6b7280;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+/* FORM */
+
+label{
+    display:block;
+    margin-bottom:6px;
+    font-size:13px;
+    font-weight:600;
+}
+
+/* NAME ROW */
+
+.name-row{
+    display:flex;
+    gap:20px;
+    width:100%;
+}
+
+/* INPUT */
+
+.input-group{
+    position:relative;
+    margin-bottom:10px;
+}
+
+.input-group i.left{
+    position:absolute;
+    top:50%;
+    left:14px;
+    transform:translateY(-50%);
+    color:#9ca3af;
+}
+
+.input-group i.right{
+    position:absolute;
+    top:50%;
+    right:14px;
+    transform:translateY(-50%);
+    color:#9ca3af;
+    cursor:pointer;
+}
+
+input{
+    width:100%;
+    padding:12px 45px 12px 40px;
+    border:2px solid #e5e7eb;
+    border-radius:12px;
+    background:#f9fafb;
+    font-size:14px;
+    transition:.25s;
+}
+
+input:focus{
+    outline:none;
+    border-color:#7c3aed;
+    background:#fff;
+    box-shadow:0 0 0 4px rgba(124,58,237,.1);
+}
+
+.password-note{
+    display:flex;
+    align-items:flex-start;
+    gap:8px;
+    margin:6px 0 14px;
+    font-size:12px;
+    color:#6b7280;
+    line-height:1.5;
+}
+
+.password-note i{
+    color:#7c3aed;
+    margin-top:2px;
+}
+
+.error{
+    border-color:red;
+}
+
+.error-text{
+    color:red;
+    font-size:12px;
+    margin-bottom:10px;
+}
+
+/* BUTTON */
+
+button{
+    width:100%;
+    padding:13px;
+    margin-top:10px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg,#7c3aed,#9333ea);
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(124,58,237,.3);
+}
+
+/* LINKS */
+
+.link{
+    text-align:center;
+    margin-top:18px;
+    font-size:14px;
+}
+
+.link a{
+    color:#7c3aed;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.note{
+    margin-top:20px;
+    padding:14px;
+    border-radius:12px;
+    background:#f3f0ff;
+    text-align:center;
+    color:#5b21b6;
+}
+
+.back{
+    text-align:center;
+    margin-top:15px;
+    font-size:13px;
+}
+
+.back a{
+    color:#6b7280;
+    text-decoration:none;
+}
+
+.agreement{
+    margin:18px 0;
+}
+
+.checkbox-container{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    font-size:14px;
+    font-weight:400;
+    line-height:1.6;
+}
+
+.checkbox-container input{
+    width:18px;
+    height:18px;
+    margin-top:2px;
+    cursor:pointer;
+}
+
+.checkbox-container a{
+    color:#7c3aed;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.checkbox-container a:hover{
+    text-decoration:underline;
+}
+
+/* TABLET */
+
+@media (max-width:768px){
+    .container{
+        max-width:500px;
+        padding:32px;
+    }
+    h1{
+        font-size:24px;
+    }
+    h2{
+        font-size:20px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width:480px){
+
+    body{
+        padding:15px;
+        align-items:flex-start;
+    }
+    .container{
+        margin:20px 0;
+        padding:24px;
+        border-radius:16px;
+    }
+
+    .name-row{
+        flex-direction:column;
+        gap:0;
+    }
+    .logo-circle{
+        width:52px;
+        height:52px;
+        font-size:20px;
+    }
+    h1{
+        font-size:22px;
+    }
+    h2{
+        font-size:20px;
+    }
+    .subtitle,
+    .desc,
+    .link{
+        font-size:13px;
+    }
+    input{
+        font-size:14px;
+        padding:11px 42px 11px 38px;
+    }
+    button{
+        padding:12px;
+    }
+}
+
+/* VERY SMALL DEVICES */
+
+@media (max-width:360px){
+
+    .container{
+        padding:20px;
+    }
+    h1{
+        font-size:20px;
+    }
+
+    h2{
+        font-size:18px;
+    }
+    .subtitle,
+    .desc,
+    .link,
+    .back{
+
+        font-size:12px;
+    }
+}

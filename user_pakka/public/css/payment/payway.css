@@ -1,0 +1,92 @@
+.container-box{
+    width:420px;
+    margin:60px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+.unlock-icon{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.title{
+    font-size:28px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:10px;
+}
+
+.sub-text{
+    color:#6b7280;
+    font-size:14px;
+    margin-bottom:25px;
+    line-height:1.6;
+}
+
+.chapter-box{
+    background:#f9fafb;
+    border:1px solid #e5e7eb;
+    border-radius:14px;
+    padding:18px;
+    margin-bottom:24px;
+    text-align:left;
+}
+
+.chapter-title{
+    font-size:18px;
+    font-weight:600;
+    color:#111827;
+    margin-bottom:8px;
+}
+
+.chapter-meta{
+    font-size:14px;
+    color:#6b7280;
+}
+
+.price{
+    margin-top:14px;
+    font-size:22px;
+    font-weight:bold;
+    color:#16a34a;
+}
+
+.pay-btn{
+    width:100%;
+    border:none;
+    background:#111827;
+    color:#fff;
+    padding:14px;
+    border-radius:12px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.2s ease;
+}
+
+.pay-btn:hover{
+    background:#1f2937;
+    transform:translateY(-1px);
+}
+
+.back-link{
+    display:inline-block;
+    margin-top:18px;
+    color:#6b7280;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.back-link:hover{
+    color:#111827;
+}
+
+.secure{
+    margin-top:20px;
+    font-size:12px;
+    color:#9ca3af;
+}

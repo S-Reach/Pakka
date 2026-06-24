@@ -1,0 +1,313 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f6fa;
+}
+
+.wrapper{
+    width:92%;
+    max-width:1400px;
+    margin:30px auto;
+}
+
+.container{
+    display:flex;
+    gap:25px;
+    align-items:flex-start;
+}
+
+.left{
+    flex:2;
+    min-width:0;
+}
+
+.right{
+    flex:1;
+    min-width:320px;
+}
+
+.card {
+    background: #fff;
+    padding: 22px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+}
+
+input, textarea, select {
+    width:100%;
+    box-sizing:border-box;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+/* TAG STYLE (CLEAN PILLS) */
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag-item {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tag-item input {
+    display: none;
+}
+
+.tag-item span {
+    padding: 8px 14px;
+    border-radius: 20px;
+    background: #f1f3f9;
+    border: 1px solid #ddd;
+    font-size: 13px;
+    color: #333;
+    transition: 0.2s;
+}
+
+/* hover */
+.tag-item:hover span {
+    background: #e6e8ff;
+    border-color: #6c63ff;
+}
+
+/* selected */
+.tag-item input:checked + span {
+    background: #6c63ff;
+    color: #fff;
+    border-color: #6c63ff;
+}
+
+.actions{
+    display:flex;
+    justify-content:flex-end;
+    gap:15px;
+    margin-top:20px;
+}
+
+/* FORMAT CARD */
+.format-grid {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.format-card {
+    flex: 1;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    transition: 0.25s;
+    background: #fafafa;
+}
+
+.format-card:hover {
+    border-color: #888;
+}
+
+.format-card.active {
+    border-color: #6c63ff;
+    background: #f3f2ff;
+}
+
+.format-card h4 {
+    margin: 0 0 5px;
+}
+
+.format-card p {
+    margin: 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.btn {
+    padding:12px 22px;
+    min-width:160px;
+    font-weight:600;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: #eee;
+}
+
+.btn-dark {
+    background: #111;
+    color: #fff;
+}
+
+/* PREVIEW */
+.preview-img {
+    width: 100%;
+    height:auto;
+    aspect-ratio:3/4;
+    object-fit: cover;
+    max-height:420px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.warning-item{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:18px;
+}
+
+.warning-item input[type="checkbox"]{
+    width:18px;
+    height:18px;
+    margin-top:4px;
+}
+
+.warning-content h4{
+    margin:0;
+    font-size:16px;
+    color:#111827;
+}
+
+.warning-content p{
+    margin:4px 0 0;
+    color:#6b7280;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.note-box{
+    margin-top:15px;
+    background:#fff7ed;
+    border:1px solid #fcd9a4;
+    color:#b45309;
+    padding:15px;
+    border-radius:12px;
+    line-height:1.6;
+    font-size:14px;
+}
+
+/* ==========================
+   LARGE TABLET
+========================== */
+
+@media (max-width:1024px){
+    .wrapper{
+        width:95%;
+    }
+    .container{
+        flex-direction:column;
+    }
+    .left,
+    .right{
+        width:100%;
+        min-width:100%;
+    }
+}
+
+/* ==========================
+   TABLET + PHONE
+========================== */
+
+@media (max-width:768px){
+    .wrapper{
+        width:95%;
+        margin:20px auto;
+    }
+    h1{
+        font-size:28px;
+    }
+    h3{
+        font-size:20px;
+    }
+    .card{
+        padding:18px;
+    }
+    .format-grid{
+        flex-direction:column;
+    }
+    .tag-container{
+        gap:8px;
+    }
+    .tag-item span{
+        font-size:12px;
+        padding:8px 12px;
+    }
+    .warning-item{
+        gap:10px;
+    }
+    .warning-content h4{
+        font-size:15px;
+    }
+    .warning-content p{
+        font-size:13px;
+    }
+    /* Cover + preview before button */
+
+    .right{
+        order:2;
+    }
+    .actions{
+
+        order:3;
+        display:flex;
+        justify-content:flex-end;
+        margin-top:25px;
+    }
+}
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width:480px){
+
+    .wrapper{
+        width:94%;
+    }
+    h1{
+        font-size:24px;
+    }
+    h3{
+        font-size:18px;
+    }
+    .card{
+        padding:15px;
+        border-radius:12px;
+    }
+    input,
+    textarea,
+    select{
+        padding:11px;
+        font-size:16px;
+    }
+    .tag-container{
+        gap:6px;
+    }
+    .tag-item span{
+        font-size:12px;
+        padding:7px 11px;
+    }
+    .warning-item{
+        gap:8px;
+    }
+    .warning-item input[type="checkbox"]{
+        width:16px;
+        height:16px;
+    }
+    .preview-img{
+        aspect-ratio:3/4;
+    }
+    .btn{
+        width:100%;
+        min-width:0;
+    }
+    .actions{
+        display:flex;
+        flex-direction:column;
+    }
+}
