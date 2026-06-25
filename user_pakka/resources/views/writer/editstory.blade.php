@@ -8,6 +8,12 @@
 
 <div class="wrapper">
 
+    <div class="back">
+        <a href="{{ route('writer.dashboard') }}">
+            ← {{ __('ui.back_to_dashboard') }}
+        </a>
+    </div>
+
     <h1>{{ __('ui.edit_story') }}</h1>
 
     <form action="{{ route('writer.story.update', $story->id) }}" method="POST" enctype="multipart/form-data">
@@ -214,13 +220,13 @@
                     <p><strong>{{ __('ui.status') }}:</strong> {{ ucfirst($story->status) }}</p>
                 </div>
 
-            </div>
-
-            <div class="actions">
+                <div class="actions">
                     <button type="submit" class="btn btn-dark">
                         {{ __('ui.update_story') }}
                     </button>
                 </div>
+                
+            </div>
         </div>
 
     </form>
