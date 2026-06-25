@@ -8,7 +8,7 @@
 
 <div class="wrapper">
 
-    <h1>Edit Story</h1>
+    <h1>{{ __('ui.edit_story') }}</h1>
 
     <form action="{{ route('writer.story.update', $story->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
@@ -20,7 +20,7 @@
             <div class="left">
 
                 <div class="card">
-                    <h3>Basic Info</h3>
+                    <h3>{{ __('ui.basic_info') }}</h3>
 
                     <input type="text" name="title" id="titleInput"
                            value="{{ $story->title }}" required>
@@ -35,7 +35,7 @@
 
                 <!-- GENRES -->
                 <div class="card">
-                    <h3>Genres</h3>
+                    <h3>{{ __('ui.genres') }}</h3>
 
                     <div class="tag-container">
                         @foreach($genres as $genre)
@@ -50,7 +50,7 @@
 
                 <!-- TAGS -->
                 <div class="card">
-                    <h3>Tags</h3>
+                    <h3>{{ __('ui.tags') }}</h3>
 
                     <div class="tag-container">
                         @foreach($tags as $tag)
@@ -67,7 +67,7 @@
                 <div class="card">
 
                     <h3>
-                        Publishing Format
+                        {{ __('ui.publishing_format') }}
                         <span class="required">*</span>
                     </h3>
 
@@ -81,9 +81,9 @@
                                    checked
                                    hidden>
 
-                            <h4>📚 Serialized</h4>
+                            <h4>📚 {{ __('ui.serialized') }}</h4>
 
-                            <p>Release chapter by chapter</p>
+                            <p>{{ __('ui.release_chapter_by_chapter') }}</p>
 
                         </label>
 
@@ -93,13 +93,13 @@
 
                 {{-- Content Warning --}}
                 <div class="card">
-                    <h3>Content Warning</h3>
+                    <h3>{{ __('ui.content_warning') }}</h3>
                     <!-- AI Assisted -->
                     <div class="warning-item">
                         <input type="checkbox" name="warnings[]" value="AI-Assisted Content">
 
                         <div class="warning-content">
-                            <h4>AI-Assisted Content</h4>
+                            <h4>{{ __('ui.ai_assisted_content') }}</h4>
                             <p>
                                 This story was written by the author but may include AI support for editing,
                                 proofreading, or improving language while keeping the original creative idea intact.
@@ -112,10 +112,9 @@
                         <input type="checkbox" name="warnings[]" value="AI-Generated Content">
 
                         <div class="warning-content">
-                            <h4>AI-Generated Content</h4>
+                            <h4>{{ __('ui.ai_generated_content') }}</h4>
                             <p>
-                                This story was generated using an AI tool and then reviewed or edited by the author.
-                                The core narrative may come from AI assistance.
+                                {{ __('ui.ai_generated_content_desc') }}
                             </p>
                         </div>
                     </div>
@@ -125,10 +124,9 @@
                         <input type="checkbox" name="warnings[]" value="Graphic Violence">
 
                         <div class="warning-content">
-                            <h4>Graphic Violence</h4>
+                            <h4>{{ __('ui.graphic_violence') }}</h4>
                             <p>
-                                Contains detailed and intense depictions of violence, blood, injury, or brutality
-                                that may be disturbing to some readers.
+                                {{ __('ui.graphic_violence_desc') }}
                             </p>
                         </div>
                     </div>
@@ -138,10 +136,9 @@
                         <input type="checkbox" name="warnings[]" value="Profanity">
 
                         <div class="warning-content">
-                            <h4>Profanity</h4>
+                            <h4>{{ __('ui.profanity') }}</h4>
                             <p>
-                                Includes frequent or strong language, swear words, or offensive expressions
-                                used throughout the story.
+                                {{ __('ui.profanity_desc') }}
                             </p>
                         </div>
                     </div>
@@ -151,10 +148,9 @@
                         <input type="checkbox" name="warnings[]" value="Sensitive Content">
 
                         <div class="warning-content">
-                            <h4>Sensitive Content</h4>
+                            <h4>{{ __('ui.sensitive_content') }}</h4>
                             <p>
-                                May include themes such as trauma, addiction, abuse, mental health issues,
-                                or other emotionally heavy and potentially triggering topics.
+                                {{ __('ui.sensitive_content_desc') }}
                             </p>
                         </div>
                     </div>
@@ -164,10 +160,9 @@
                         <input type="checkbox" name="warnings[]" value="Sexual Content">
 
                         <div class="warning-content">
-                            <h4>Sexual Content</h4>
+                            <h4>{{ __('ui.sexual_content') }}</h4>
                             <p>
-                                Contains explicit or mature sexual themes, descriptions, or scenes intended
-                                for adult audiences only.
+                                {{ __('ui.sexual_content_desc') }}
                             </p>
                         </div>
                     </div>
@@ -176,7 +171,7 @@
                 
                 {{-- OWNERSHIP --}}
                 <div class="card">
-                    <h3>Ownership</h3>
+                    <h3>{{ __('ui.ownership') }}</h3>
 
                     <div class="warning-item">
 
@@ -186,8 +181,8 @@
                             {{ old('is_fanfiction', $story->is_fanfiction) ? 'checked' : '' }}>
 
                         <div class="warning-content">
-                            <h4>This is fan fiction</h4>
-                            <p>Check this if your story uses existing characters or world.</p>
+                            <h4>{{ __('ui.fanfiction_title') }}</h4>
+                            <p>{{ __('ui.fanfiction_desc') }}</p>
                         </div>
 
                     </div>
@@ -198,32 +193,32 @@
             <div class="right">
 
                 <div class="card">
-                    <h3>Cover Image</h3>
+                    <h3>{{ __('ui.cover_image') }}</h3>
 
                     <input type="file" name="cover_image" id="coverInput" accept="image/*">
                 </div>
 
                 <div class="card">
-                    <h3>Live Preview</h3>
+                    <h3>{{ __('ui.live_preview') }}</h3>
 
                     <img id="previewCover"
                          class="preview-img"
                          src="{{ $story->cover_image ? asset('storage/'.$story->cover_image) : 'https://via.placeholder.com/300x400' }}">
 
-                    <p><strong>Title:</strong> <span id="previewTitle">{{ $story->title }}</span></p>
+                    <p><strong>{{ __('ui.title') }}:</strong> <span id="previewTitle">{{ $story->title }}</span></p>
 
-                    <p><strong>Language:</strong> <span id="previewLanguage">{{ $story->language }}</span></p>
+                    <p><strong>{{ __('ui.language') }}:</strong> <span id="previewLanguage">{{ $story->language }}</span></p>
 
-                    <p><strong>Format:</strong> <span id="previewFormat">{{ ucfirst($story->format) }}</span></p>
+                    <p><strong>{{ __('ui.format') }}:</strong> <span id="previewFormat">{{ ucfirst($story->format) }}</span></p>
 
-                    <p><strong>Status:</strong> {{ ucfirst($story->status) }}</p>
+                    <p><strong>{{ __('ui.status') }}:</strong> {{ ucfirst($story->status) }}</p>
                 </div>
 
             </div>
 
             <div class="actions">
                     <button type="submit" class="btn btn-dark">
-                        Update Story
+                        {{ __('ui.update_story') }}
                     </button>
                 </div>
         </div>

@@ -33,18 +33,18 @@
             session('last_chapter_id')
         ]) }}">
             <button class="back-btn">
-                ← Back to Reading
+                ← {{ __('ui.back_to_reading') }}
             </button>
         </a>
     @endif
 
-    <h1>Reading Preferences</h1>
+    <h1>{{ __('ui.reading_preference') }}</h1>
 
     <form method="POST" action="{{ route('preferences.save') }}">
         @csrf
 
         <!-- THEME -->
-        <h2>Theme</h2>
+        <h2>{{ __('ui.theme') }}</h2>
         <div class="options">
             <div id="theme-light"
                  class="card theme-card {{ $preferences->theme == 'light' ? 'active' : '' }}"
@@ -70,7 +70,7 @@
         <!-- FONT -->
         @if($isKhmerStory)
 
-        <h2>Khmer Font</h2>
+        <h2>{{ __('ui.khmer_font') }}</h2>
 
         <div class="options">
 
@@ -136,7 +136,7 @@
     @endif
 
         <!-- SIZE -->
-        <h2>Font Size</h2>
+        <h2>{{ __('ui.font_size') }}</h2>
 
         <div style="display:flex; align-items:center; gap:10px;">
 
@@ -179,7 +179,7 @@
         @endif
 
         <button class="btn">
-            Apply & Continue Reading
+            {{ __('ui.apply_continue_reading') }}
         </button>
     </form>
 

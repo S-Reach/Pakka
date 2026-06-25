@@ -26,7 +26,7 @@
 @if(isset($story) && isset($chapter))
 
     <a class="back-link" href="{{ route('writer.chapter', $story->id) }}">
-        ← Back
+        ← {{ __('ui.back') }}
     </a>
 
     <h2>{{ $story->title }}</h2>
@@ -35,7 +35,7 @@
 
         @if($chapter->chapter_approval_status === 'approved' && $chapter->story_progress === 'published')
             <div class="alert">
-                This chapter is published. Editing will resubmit it for admin approval.
+                {{ __('ui.edit_desc') }}
             </div>
         @endif
 
@@ -61,7 +61,7 @@
 
             {{-- TITLE --}}
             <label>
-                Chapter Title
+                {{ _('ui.chapter_title') }}
                 <span class="required">*</span>
             </label>
 
@@ -78,7 +78,7 @@
 
             {{-- CONTENT --}}
             <label>
-                Chapter Content
+                {{ __('ui.chapter_content') }}
                 <span class="required">*</span>
             </label>
 
@@ -95,7 +95,7 @@
 
             {{-- AUTOSAVE STATUS --}}
             <div class="autosave-status" id="autosaveStatus">
-                Autosave enabled
+                {{ __('ui.autosave_enabled') }}
             </div>
 
             @error('content')
@@ -111,8 +111,8 @@
 
             <div class="card premium-card">
                 <div>
-                    <h4>Premium Chapter</h4>
-                    <p>Readers must unlock this chapter to continue reading.</p>
+                    <h4>{{ __('ui.premium_chapter') }}</h4>
+                    <p>{{ __('ui.premium_chapter_desc') }}</p>
                 </div>
 
                 <label class="switch">
@@ -126,7 +126,7 @@
 
             <div id="priceBox" class="price-box" style="display:none;">
                 <div class="price-header">
-                    Premium Price
+                    {{ __('ui.premium_price') }}
                 </div>
 
                 <div class="price-value">
@@ -138,15 +138,15 @@
 
             <div class="price-box">
                 <div class="price-header">
-                    Premium Locked
+                    {{ __('ui.premium_locked') }}
                 </div>
 
                 <div class="price-value">
-                    Free Chapters Required
+                    {{ __('ui.free_chapters_required') }}
                 </div>
 
                 <small>
-                    You must publish at least 5 chapters before enabling premium chapters.
+                   {{ __('ui.publish_5_chapters_required') }}
                 </small>
             </div>
 
@@ -155,7 +155,7 @@
             {{-- SAVE --}}
             <button type="submit">
 
-                {{ $chapter->id ? 'Update Chapter' : 'Draft Chapter' }}
+                {{ $chapter->id ? __('ui.update_chapter') : __('ui.draft_chapter') }}
 
             </button>
 
@@ -174,15 +174,15 @@
 
     <div class="modal-box">
 
-        <h3>Chapter Updated</h3>
+        <h3>{{ __('ui.chapter_updated') }}</h3>
 
-        <p>Your chapter has been updated successfully.</p>
+        <p>{{ __('ui.chapter_updated_successfully') }}</p>
 
         <div class="modal-actions">
 
             <button
                 onclick="window.location.href='{{ route('writer.chapter', $story->id) }}'">
-                View All Chapters
+                {{ __('ui.view_all_chapters') }}
             </button>
 
         </div>
@@ -198,14 +198,14 @@
 
     <div class="modal-box">
 
-        <h3 id="validationTitle">Premium Requirement</h3>
+        <h3 id="validationTitle">{{ __('ui.premium_requirement') }}</h3>
 
         <p id="validationMessage"></p>
 
         <div class="modal-actions">
 
             <button type="button" id="closeValidationModal">
-                OK
+                {{ __('ui.ok') }}
             </button>
 
         </div>

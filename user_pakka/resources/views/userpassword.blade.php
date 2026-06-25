@@ -9,11 +9,11 @@
 
     <div class="back-btn" onclick="history.back()">
         <i class="fa-solid fa-arrow-left"></i>
-        Back
+        {{ __('ui.back') }}
     </div>
 
-    <h2>Password & Security</h2>
-    <p>Manage your password and account security</p>
+    <h2>{{ __('ui.password_security') }}</h2>
+    <p>{{ __('ui.manage_password_security') }}</p>
 
     <div class="card">
 
@@ -23,9 +23,9 @@
             {{-- Current Password --}}
             @if(Auth::user()->password)
             <div class="mb-3">
-                <label>Current Password</label>
+                <label>{{ __('ui.current_password') }}</label>
                 <div class="password-wrapper">
-                    <input type="password" name="current_password" id="current_password" class="form-control" placeholder="Enter current password">
+                    <input type="password" name="current_password" id="current_password" class="form-control" placeholder="{{ __('ui.enter_current_password') }}">
 
                     <span>
                         <i class="fa fa-eye" onclick="togglePassword('current_password', this)"></i>
@@ -39,9 +39,9 @@
 
             {{-- New Password --}}
             <div class="mb-3">
-                <label>New Password</label>
+                <label>{{ __('ui.new_password') }}</label>
                 <div class="password-wrapper">
-                    <input type="password" name="new_password" id="new_password" class="form-control" placeholder="Enter new password">
+                    <input type="password" name="new_password" id="new_password" class="form-control" placeholder="{{ __('ui.enter_new_password') }}">
 
                     <span>
                         <i class="fa fa-eye" onclick="togglePassword('new_password', this)"></i>
@@ -54,9 +54,9 @@
 
             {{-- Confirm Password --}}
             <div class="mb-3">
-                <label>Confirm New Password</label>
+                <label>{{ __('ui.confirm_new_password') }}</label>
                 <div class="password-wrapper">
-                    <input type="password" name="new_password_confirmation" id="confirm_password" class="form-control" placeholder="Confirm new password">
+                    <input type="password" name="new_password_confirmation" id="confirm_password" class="form-control" placeholder="{{ __('ui.confirm_new_password') }}">
 
                     <span>
                         <i class="fa fa-eye" onclick="togglePassword('confirm_password', this)"></i>
@@ -65,7 +65,7 @@
             </div>
 
             <button class="btn-dark">
-                Update Password
+                {{ __('ui.update_password') }}
             </button>
         </form>
 
@@ -80,12 +80,12 @@
 
     {{-- Security Tips --}}
     <div class="card mt-4">
-        <h4>Security Tips</h4>
+        <h4>{{ __('ui.security_tips') }}</h4>
         <ul>
-            <li>Use at least 8 characters</li>
-            <li>Mix uppercase, lowercase, numbers, and special character</li>
-            <li>Don’t reuse passwords</li>
-            <li>Change regularly</li>
+            <li>{{ __('ui.use_at_least_8_characters') }}</li>
+            <li>{{ __('ui.mix_uppercase_lowercase_numbers') }}</li>
+            <li>{{ __('ui.dont_reuse_passwords') }}</li>
+            <li>{{ __('ui.change_password_regularly') }}</li>
         </ul>
     </div>
 

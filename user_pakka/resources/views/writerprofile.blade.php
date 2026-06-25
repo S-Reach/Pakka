@@ -38,9 +38,9 @@
             <p>{{ $user->bio }}</p>
 
             <div style="margin-top:20px;">
-                <div>Stories: <b>{{ $stories->count() }}</b></div>
-                <div>Followers: <b>{{ $followersCount }}</b></div>
-                <div>Following: <b>{{ $followingCount }}</b></div>
+                <div>{{ __('ui.stories') }}: <b>{{ $stories->count() }}</b></div>
+                <div>{{ __('ui.followers') }}: <b>{{ $followersCount }}</b></div>
+                <div>{{ __('ui.following') }}: <b>{{ $followingCount }}</b></div>
             </div>
 
         </div>
@@ -52,15 +52,15 @@
         <!-- TABS -->
         <div class="tabs">
             <button class="tab-btn active" data-tab="stories">
-                Stories ({{ $stories->count() }})
+                {{ __('ui.stories') }} ({{ $stories->count() }})
             </button>
 
             <button class="tab-btn" data-tab="followers">
-                Followers ({{ $followersCount }})
+                {{ __('ui.followers') }} ({{ $followersCount }})
             </button>
 
             <button class="tab-btn" data-tab="following">
-                Following ({{ $followingCount }})
+                {{ __('ui.following') }} ({{ $followingCount }})
             </button>
         </div>
 
@@ -90,7 +90,7 @@
                         </div>
                     </div>
                 @empty
-                    <p>No stories yet.</p>
+                    <p>{{ __('ui.no_stories_yet') }}</p>
                 @endforelse
 
             </div>
@@ -120,7 +120,7 @@
                         </a>
                     </div>
                 @empty
-                    <p>No followers yet.</p>
+                    <p>{{ __('ui.no_followers_yet') }}</p>
                 @endforelse
 
             </div>
@@ -150,7 +150,7 @@
                         </a>
                     </div>
                 @empty
-                    <p>No following users.</p>
+                    <p>{{ __('ui.no_following_yet') }}</p>
                 @endforelse
 
             </div>

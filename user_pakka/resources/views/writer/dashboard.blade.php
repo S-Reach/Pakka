@@ -12,43 +12,43 @@
     <!-- HEADER -->
     <div class="dashboard-navbar">
         <div>
-            <h1>Writer Dashboard</h1>
-            <p>Manage your stories and track performance</p>
+            <h1>{{ __('ui.writer_dashboard') }}</h1>
+            <p>{{ __('ui.manage_stories') }}</p>
         </div>
 
-        <a href="{{ route('writer.createstory') }}" class="btn">+ New Story</a>
+        <a href="{{ route('writer.createstory') }}" class="btn">+ {{ __('ui.new_story') }}</a>
     </div>
 
     <!-- STATS -->
     <div class="stats">
 
         <div class="stat-card">
-            <p>Total Stories</p>
+            <p>{{ __('ui.total_stories') }}</p>
             <h2>{{ $stats['stories'] }}</h2>
         </div>
 
         <div class="stat-card">
-            <p>Published</p>
+            <p>{{ __('ui.published') }}</p>
             <h2>{{ $stats['published'] }}</h2>
         </div>
 
         <div class="stat-card">
-            <p>Drafts</p>
+            <p>{{ __('ui.drafts') }}</p>
             <h2>{{ $stats['drafts'] }}</h2>
         </div>
 
         <div class="stat-card">
-            <p>Earnings</p>
+            <p>{{ __('ui.earnings') }}</p>
             <h2>${{ number_format($stats['writerShare'], 2) }}</h2>
 
             @if($latestWithdrawal && $latestWithdrawal->status == 'pending')
                 <button class="btn" disabled
                         style="background:#9ca3af; cursor:not-allowed;">
-                    Withdrawal Pending
+                    {{ __('ui.withdrawal_pending') }}
                 </button>
             @else
                 <button type="button" class="btn" onclick="openModal()">
-                    Request Withdrawal
+                    {{ __('ui.request_withdrawal') }}
                 </button>
             @endif
         </div>
@@ -66,13 +66,13 @@
         <!-- LEFT: Progress Filters -->
         <div class="filters" style="margin:0;">
             <a href="?story_progress=all&sort={{ $sort }}"
-            class="filter {{ $story_progress=='all' ? 'active' : '' }}">All</a>
+            class="filter {{ $story_progress=='all' ? 'active' : '' }}">{{ __('ui.all') }}</a>
 
             <a href="?story_progress=published&sort={{ $sort }}"
-            class="filter {{ $story_progress=='published' ? 'active' : '' }}">Published</a>
+            class="filter {{ $story_progress=='published' ? 'active' : '' }}">{{ __('ui.published') }}</a>
 
             <a href="?story_progress=draft&sort={{ $sort }}"
-            class="filter {{ $story_progress=='draft' ? 'active' : '' }}">Draft</a>
+            class="filter {{ $story_progress=='draft' ? 'active' : '' }}">{{ __('ui.drafts') }}</a>
         </div>
 
         <!-- RIGHT: Sort Dropdown -->
@@ -90,10 +90,10 @@
                         color:#374151;
                         cursor:pointer;">
                 <option value="latest" {{ $sort=='latest' ? 'selected' : '' }}>
-                    Latest
+                    {{ __('ui.latest') }}
                 </option>
                 <option value="oldest" {{ $sort=='oldest' ? 'selected' : '' }}>
-                    Oldest
+                    {{ __('ui.oldest') }}
                 </option>
             </select>
         </form>
@@ -139,19 +139,19 @@
             </div>
 
             <div class="actions">
-                <a href="{{ route('writer.story.edit', $story->id) }}">Edit</a>
-                <a href="{{ route('writer.chapter', $story->id) }}">Manage</a>
+                <a href="{{ route('writer.story.edit', $story->id) }}">{{ __('ui.edit') }}</a>
+                <a href="{{ route('writer.chapter', $story->id) }}">{{ __('ui.manage') }}</a>
                 @if($story->story_status !== 'complete')
                     <form action="{{ route('writer.story.complete', $story->id) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('PATCH')
 
                         <button type="submit" class="btn">
-                            Mark as Complete
+                            {{ __('ui.mark_complete') }}
                         </button>
                     </form>
                 @else
-                    <span class="badge published">Completed</span>
+                    <span class="badge published">{{ __('ui.completed') }}</span>
                 @endif
             </div>
 
@@ -161,8 +161,8 @@
     @empty
 
         <div class="empty">
-            <h3>No stories yet</h3>
-            <a href="{{ route('writer.createstory') }}" class="btn">Create Story</a>
+            <h3>{{ __('ui.no_stories') }}</h3>
+            <a href="{{ route('writer.createstory') }}" class="btn">{{ __('ui.create_story') }}</a>
         </div>
 
     @endforelse
@@ -181,7 +181,7 @@
     <div class="modal-box">
 
         <div class="modal-header">
-            <h2>Request Withdrawal</h2>
+            <h2>{{ __('ui.request_withdrawal') }}</h2>
             <button class="close-btn" onclick="closeModal()">✕</button>
         </div>
 
@@ -191,32 +191,32 @@
             <div class="modal-body">
 
                 <div class="balance-box">
-                    <p>Available Balance</p>
+                    <p>{{ __('ui.available_balance') }}</p>
                     <h1>${{ number_format($stats['writerShare'], 2) }}</h1>
                 </div>
 
                 <div class="form-group">
-                    <label>Amount</label>
+                    <label>{{ __('ui.withdrawal_amount') }}</label>
                     <input type="number" step="0.01" min="10"
                            max="{{ $stats['writerShare'] ?? 0 }}"
                            name="amount" required>
-                    <small>Minimum withdrawal: $10.00</small>
+                    <small>{{ __('ui.minimum_withdrawal') }}</small>
                 </div>
 
                 <div class="form-group">
-                    <label>Bank Name</label>
+                    <label>{{ __('ui.bank_name') }}</label>
                     <input type="text" name="bank_name" 
                         placeholder="E.g ABA Bank, ACLEDA or other Bank"required>
                 </div>
 
                 <div class="form-group">
-                    <label>Account Number</label>
+                    <label>{{ __('ui.account_number') }}</label>
                     <input type="text" name="account_number" 
                         placeholder="Enter Your Bank Account" required>
                 </div>
 
                 <div class="form-group">
-                    <label>Account Holder Name</label>
+                    <label>{{ __('ui.account_holder_name') }}</label>
                     <input type="text" name="account_holder_name" 
                         placeholder="Full Name as on Your Bank Account" required>
                 </div>
@@ -224,7 +224,7 @@
             </div>
 
             <div class="modal-footer">
-                <button type="submit">Submit Withdrawal</button>
+                <button type="submit">{{ __('ui.submit_withdrawal_request') }}</button>
             </div>
 
         </form>

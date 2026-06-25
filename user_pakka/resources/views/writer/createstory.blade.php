@@ -11,11 +11,11 @@
 
     <div class="back">
         <a href="{{ route('writer.dashboard') }}">
-            ← Back to Dashboard
+            ← {{ __('ui.back_to_dashboard') }}
         </a>
     </div>
 
-    <h1>Create New Story</h1>
+    <h1>{{ __('ui.create_new_story') }}</h1>
 
     {{-- SUCCESS --}}
     @if(session('success'))
@@ -60,13 +60,13 @@
                 <div class="card">
 
                     <h3>
-                        Basic Info
+                        {{ __('ui.basic_info') }}
                         <span class="required">*</span>
                     </h3>
 
                     {{-- TITLE --}}
                     <label class="field-label">
-                        Story Title
+                        {{ __('ui.story_title') }}
                         <span class="required">*</span>
                     </label>
 
@@ -85,13 +85,13 @@
 
                     {{-- SYNOPSIS --}}
                     <label class="field-label">
-                        Synopsis
+                        {{ __('ui.synopsis') }}
                         <span class="required">*</span>
                     </label>
 
                     <textarea name="synopsis"
                               id="synopsisInput"
-                              placeholder="Write your story synopsis...">{{ old('synopsis') }}</textarea>
+                              placeholder="{{ __('ui.write_synopsis') }}">{{ old('synopsis') }}</textarea>
 
                     <div class="word-counter">
 
@@ -113,7 +113,7 @@
 
                     {{-- LANGUAGE --}}
                     <label class="field-label">
-                        Language
+                        {{ __('ui.language') }}
                         <span class="required">*</span>
                     </label>
 
@@ -122,7 +122,7 @@
                             required>
 
                         <option value="" disabled selected>
-                            Select Language
+                            {{ __('ui.select_language') }}
                         </option>
 
                         <option value="English"
@@ -149,7 +149,7 @@
                 <div class="card">
 
                     <h3>
-                        Genres
+                        {{ __('ui.genres') }}
                         <span class="required">*</span>
                     </h3>
 
@@ -183,7 +183,7 @@
                 {{-- TAGS --}}
                 <div class="card">
 
-                    <h3>Tags</h3>
+                    <h3>{{ __('ui.tags') }}</h3>
 
                     <div class="tag-container">
 
@@ -210,7 +210,7 @@
                 <div class="card">
 
                     <h3>
-                        Publishing Format
+                        {{ __('ui.publishing_format') }}
                         <span class="required">*</span>
                     </h3>
 
@@ -224,9 +224,9 @@
                                    checked
                                    hidden>
 
-                            <h4>📚 Serialized</h4>
+                            <h4>📚 {{ __('ui.serialized') }}</h4>
 
-                            <p>Release chapter by chapter</p>
+                            <p>{{ __('ui.release_chapter_by_chapter') }}</p>
 
                         </label>
 
@@ -237,17 +237,15 @@
                 {{-- Content Warning --}}
                 <div class="card">
 
-                    <h3>Content Warning</h3>
+                    <h3>{{ __('ui.content_warning') }}</h3>
 
                     <div class="warning-item">
                         <input type="checkbox" name="warnings[]" value="AI-Assisted Content">
 
                         <div class="warning-content">
-                            <h4>AI-Assisted Content</h4>
+                            <h4>{{ __('ui.ai_assisted_content') }}</h4>
                             <p>
-                                The outline has used an AI tool for editing or proofreading.
-                                The story must reflect the author's creativity and storyline,
-                                but it may use an AI's voice and tone.
+                                {{ __('ui.ai_assisted_content_desc') }}
                             </p>
                         </div>
                     </div>
@@ -256,10 +254,9 @@
                         <input type="checkbox" name="warnings[]" value="AI-Generated Content">
 
                         <div class="warning-content">
-                            <h4>AI-Generated Content</h4>
+                            <h4>{{ __('ui.ai_generated_content') }}</h4>
                             <p>
-                                The story was generated using an AI tool,
-                                the author proofread and edited the result.
+                                {{ __('ui.ai_generated_content_desc') }}
                             </p>
                         </div>
                     </div>
@@ -268,10 +265,9 @@
                         <input type="checkbox" name="warnings[]" value="Graphic Violence">
 
                         <div class="warning-content">
-                            <h4>Graphic Violence</h4>
+                            <h4>{{ __('ui.graphic_violence') }}</h4>
                             <p>
-                                Detailed descriptions of violent acts, bloodshed,
-                                mutilation, or disturbing violence.
+                                {{ __('ui.graphic_violence_desc') }}
                             </p>
                         </div>
                     </div>
@@ -280,9 +276,9 @@
                         <input type="checkbox" name="warnings[]" value="Profanity">
 
                         <div class="warning-content">
-                            <h4>Profanity</h4>
+                            <h4>{{ __('ui.profanity') }}</h4>
                             <p>
-                                Excessive or obscene swearing and cursing.
+                                {{ __('ui.profanity_desc') }}
                             </p>
                         </div>
                     </div>
@@ -291,11 +287,9 @@
                         <input type="checkbox" name="warnings[]" value="Sensitive Content">
 
                         <div class="warning-content">
-                            <h4>Sensitive Content</h4>
+                            <h4>{{ __('ui.sensitive_content') }}</h4>
                             <p>
-                                Depictions of torture, slavery, substance abuse,
-                                mental illness, addiction, self-harm,
-                                or other sensitive topics.
+                                {{ __('ui.sensitive_content_desc') }}
                             </p>
                         </div>
                     </div>
@@ -304,9 +298,9 @@
                         <input type="checkbox" name="warnings[]" value="Sexual Content">
 
                         <div class="warning-content">
-                            <h4>Sexual Content</h4>
+                            <h4>{{ __('ui.sexual_content') }}</h4>
                             <p>
-                                Explicit sexual content or descriptive scenes.
+                                {{ __('ui.sexual_content_desc') }}
                             </p>
                         </div>
                     </div>
@@ -316,7 +310,7 @@
                 {{-- OWNERSHIP --}}
                 <div class="card">
 
-                    <h3>Content Ownership Verification</h3>
+                    <h3>{{ __('ui.content_ownership_verification') }}</h3>
 
                     <div class="warning-item">
 
@@ -328,10 +322,10 @@
 
                         <div class="warning-content">
 
-                            <h4>This is fan fiction</h4>
+                            <h4>{{ __('ui.fanfiction_title') }}</h4>
 
                             <p>
-                                Check this if your story uses someone else's characters or world.
+                                {{ __('ui.fanfiction_desc') }}
                             </p>
 
                         </div>
@@ -340,9 +334,9 @@
 
                     <div class="note-box">
 
-                        <strong>Note:</strong>
+                        <strong>{{ __('ui.note') }}:</strong>
 
-                        Fan fiction and derivative works should respect copyright laws.
+                        {{ __('ui.fanfiction_note') }}
 
                     </div>
 
@@ -356,7 +350,7 @@
                 {{-- COVER --}}
                 <div class="card">
 
-                    <h3>Cover Image</h3>
+                    <h3>{{ __('ui.cover_image') }}</h3>
 
                     <input type="file"
                            name="cover_image"
@@ -368,30 +362,30 @@
                 {{-- LIVE PREVIEW --}}
                 <div class="card">
 
-                    <h3>Live Preview</h3>
+                    <h3>{{ __('ui.live_preview') }}</h3>
 
                     <img id="previewCover"
                          class="preview-img"
                          src="https://via.placeholder.com/300x400?text=No+Cover">
 
                     <p>
-                        <strong>Title:</strong>
+                        <strong>{{ __('ui.title') }}:</strong>
                         <span id="previewTitle">-</span>
                     </p>
 
                     <p>
-                        <strong>Language:</strong>
+                        <strong>{{ __('ui.language') }}:</strong>
                         <span id="previewLanguage">-</span>
                     </p>
 
                     <p>
-                        <strong>Format:</strong>
+                        <strong>{{ __('ui.format') }}:</strong>
                         <span id="previewFormat">Serialized</span>
                     </p>
 
                     <p>
-                        <strong>Status:</strong>
-                        Draft
+                        <strong>{{ __('ui.status') }}:</strong>
+                        {{ __('ui.draft') }}
                     </p>
 
                 </div>
@@ -404,7 +398,7 @@
                             value="draft"
                             class="btn">
 
-                        Save Draft
+                        {{ __('ui.save_draft') }}
 
                     </button>
 
@@ -413,7 +407,7 @@
                             value="next"
                             class="btn btn-dark">
 
-                        Next →
+                        {{ __('ui.next') }} →
 
                     </button>
 

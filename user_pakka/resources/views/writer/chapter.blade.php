@@ -19,16 +19,15 @@
             </div>
 
             <h2>
-                Story Submitted
+                {{_('ui.story_submitted') }}
             </h2>
 
             <p>
-                Your chapter has been published successfully and the story
-                has been sent to the admin for review and approval.
+                {{_('ui.chapter_published_successfully') }}
             </p>
 
             <button onclick="closePopup()">
-                Okay
+                {{_('ui.okay') }}
             </button>
 
         </div>
@@ -40,7 +39,7 @@
     <div class="back">
 
         <a href="{{ route('writer.dashboard') }}">
-            ← Back to Dashboard
+            ← {{ _('ui.back_to_dashboard') }}
         </a>
 
     </div>
@@ -50,7 +49,7 @@
     </div>
 
     <div class="subtitle">
-        Share your creative story with the world
+        {{_('ui.share_story_world') }}
     </div>
 
     <div class="card">
@@ -59,7 +58,7 @@
 
             <div>
 
-                <h2>Chapters</h2>
+                <h2>{{ _('ui.chapters') }}</h2>
 
                 <small>
 
@@ -76,7 +75,7 @@
             <a href="{{ route('writer.chapter.create', $story->id) }}"
                class="btn-dark">
 
-                + New Chapter
+               + {{ _('ui.new_chapter') }}
 
             </a>
 
@@ -91,7 +90,7 @@
                     <div>
 
                         <strong>
-                            Chapter {{ $chapter->chapter_number }}
+                            {{ __('ui.chapter') }} {{ $chapter->chapter_number }}
                         </strong>
 
                         - {{ $chapter->title ?? 'Untitled' }}
@@ -130,7 +129,7 @@
                     <div class="actions">
 
                         <a href="{{ route('writer.chapter.edit', [$story->id, $chapter->id]) }}">
-                            Edit
+                            {{ __('ui.edit') }}
                         </a>
                         @if($chapter->story_progress == 'draft')
                             <form action="{{ route('writer.chapter.publish', [$story->id, $chapter->id]) }}"
@@ -138,7 +137,7 @@
                                   style="display:inline;">
                                 @csrf
                                 <button class="publish-btn">
-                                    Publish
+                                    {{ __('ui.publish') }}
                                 </button>
                             </form>
                         @endif
@@ -150,7 +149,7 @@
                                 @csrf
 
                                 <button class="publish-btn" style="background:#f59e0b;">
-                                    Resubmit
+                                    {{ __('ui.resubmit') }}
                                 </button>
                             </form>
                         @endif
@@ -166,11 +165,11 @@
             <div class="empty-box">
 
                 <h3>
-                    No chapters yet
+                    {{ __('ui.no_chapters') }}
                 </h3>
 
                 <p>
-                    Start building your story by creating your first chapter.
+                    {{ __('ui.start_building_story') }}
                 </p>
 
                 <br>
@@ -178,7 +177,7 @@
                 <a href="{{ route('writer.chapter.create', $story->id) }}"
                    class="btn-dark">
 
-                    + Add Your First Chapter
+                    {{ __('ui.add_first_chapter') }}
 
                 </a>
 

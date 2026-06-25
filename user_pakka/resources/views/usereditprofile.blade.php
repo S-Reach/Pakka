@@ -9,8 +9,8 @@
 
 <div class="wrapper">
 
-    <h2>Profile Information</h2>
-    <p class="subtitle">Manage your personal details and public profile</p>
+    <h2>{{ __('ui.profile_information') }}</h2>
+    <p class="subtitle">{{ __('ui.manage_profile_details') }}</p>
 
     <div class="profile-container">
 
@@ -40,13 +40,13 @@
                         <path d="M8 8l4-4 4 4"></path>
                         <path d="M4 20h16"></path>
                     </svg>
-                    Change Avatar
+                    {{ __('ui.change_avatar') }}
                 </label>
             </div>
 
             <!-- Stats -->
             <div class="stats-card">
-                <h4>Account Stats</h4>
+                <h4>{{ __('ui.account_stats') }}</h4>
 
                 <div class="stat-row">
                     <span class="stat-left">
@@ -55,7 +55,7 @@
                             <path d="M7 21v-2a4 4 0 0 1 3-3.87"></path>
                             <circle cx="12" cy="7" r="4"></circle>
                         </svg>
-                        Followers
+                        {{ __('ui.followers') }}
                     </span>
                     <strong id="followersCount">{{ $followers  }}</strong>
                 </div>
@@ -67,7 +67,7 @@
                             <path d="M7 21v-2a4 4 0 0 1 3-3.87"></path>
                             <circle cx="12" cy="7" r="4"></circle>
                         </svg>
-                        Following
+                        {{ __('ui.following') }}
                     </span>
                     <strong>{{ $following }}</strong>
                 </div>
@@ -78,7 +78,7 @@
                             <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
                             <path d="M6.5 2H20v15H6.5A2.5 2.5 0 0 0 4 19.5V2z"></path>
                         </svg>
-                        Library
+                        {{ __('ui.library') }}
                     </span>
                     <strong>{{ $user->library->count() }}</strong>
                 </div>
@@ -88,7 +88,7 @@
 
         <!-- RIGHT -->
         <div class="right-card">
-            <h3>Edit Profile</h3>
+            <h3>{{ __('ui.edit_profile') }}</h3>
 
             <form method="POST" action="{{ route('userprofile.update') }}" enctype="multipart/form-data">
                 @csrf
@@ -98,32 +98,32 @@
 
                 <div class="name-row">
                     <div class="form-group">
-                        <label>First Name</label>
+                        <label>{{ __('ui.first_name') }}</label>
                         <input type="text" name="first_name" value="{{ $user->first_name }}">
                     </div>
 
                     <div class="form-group">
-                        <label>Last Name</label>
+                        <label>{{ __('ui.last_name') }}</label>
                         <input type="text" name="last_name" value="{{ $user->last_name }}">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label>Email</label>
+                    <label>{{ __('ui.email') }}</label>
                     <input type="text" value="{{ $user->email }}" disabled>
                 </div>
 
                 <div class="form-group">
-                    <label>Username</label>
+                    <label>{{ __('ui.username') }}</label>
                     <input type="text" value="{{ $user->username }}" disabled>
                 </div>
 
                 <div class="form-group">
-                    <label>Bio</label>
+                    <label>{{ __('ui.bio') }}</label>
                     <textarea name="bio">{{ $user->bio }}</textarea>
                 </div>
 
-                <button class="btn-save">Save Profile Changes</button>
+                <button class="btn-save">{{ __('ui.save_profile_changes') }}</button>
             </form>
         </div>
 
