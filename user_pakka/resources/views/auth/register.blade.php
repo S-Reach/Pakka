@@ -15,7 +15,9 @@
 <div class="container">
 
 <div class="logo">
-    <div class="logo-circle">P</div>
+    <div class="logo-circle">
+        <img src="{{ asset('images/logo.png') }}" alt="Pakka Logo" class="pk-logo-img">
+    </div>
     <h1>Pakka</h1>
     <div class="subtitle">{{ __('ui.register_hero') }}</div>
 </div>

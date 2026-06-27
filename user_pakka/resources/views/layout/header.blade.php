@@ -42,32 +42,26 @@
     color:inherit;
 }
 
-.pk-logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-
-    font-weight:700;
-    font-size:18px;
+.pk-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    user-select: none;
 }
 
-.pk-logo-circle{
-    width:36px;
-    height:36px;
+.pk-logo-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    display: block;
+}
 
-    border-radius:50%;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    background:linear-gradient(
-        135deg,
-        #8b5cf6,
-        #ec4899
-    );
-
-    color:white;
+.pk-logo span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #7c3aed; /* Change to your brand color */
+    font-family: 'Ariel', sans-serif;
 }
 
 /* =========================
@@ -186,9 +180,6 @@
     font-size:14px;
 }
 
-/* =========================
-   DROPDOWN
-========================= */
 /* =========================
    DROPDOWN
 ========================= */
@@ -449,13 +440,16 @@
         padding:10px 14px;
     }
 
-    .pk-logo{
-        font-size:16px;
+    .pk-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 
-    .pk-logo-circle{
-        width:34px;
-        height:34px;
+    .pk-logo-img {
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
     }
 
     .pk-profile{
@@ -475,7 +469,7 @@
 
         <a href="{{ route('home') }}" class="pk-logo-link">
             <div class="pk-logo">
-                <div class="pk-logo-circle">P</div>
+                <img src="{{ asset('images/logo.png') }}" alt="Pakka Logo" class="pk-logo-img">
                 <span>Pakka</span>
             </div>
         </a>

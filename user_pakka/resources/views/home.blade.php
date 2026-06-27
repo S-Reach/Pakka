@@ -251,6 +251,9 @@
 <div class="footer">
     <div class="footer-grid">
         <div>
+            <div class="footer-logo-circle">
+                <img src="{{ asset('images/logo.png') }}" alt="Pakka Logo" class="footer-pk-logo-img">
+            </div>
             <h4>Pakka</h4>
             <p>{{ __('ui.footer_about') }} </p>
         </div>

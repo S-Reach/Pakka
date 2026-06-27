@@ -5,84 +5,590 @@
 <title>Copyright Policy</title>
 <link rel="stylesheet" href="{{ asset('css/legal/copyright-policy.css') }}">
 
+<div class="copyright-container">
 
-<div class="legal-container">
+    <div class="copyright-header">
+        <h1>PAKKA COPYRIGHT & TAKEDOWN POLICY</h1>
+        <p class="updated">
+            Last Updated: June 22, 2026
+        </p>
+    </div>
 
-<h1 class="legal-title">Copyright Policy</h1>
+    <div class="copyright-content">
 
-<div class="legal-date">Last updated: June 16, 2026</div>
+        <!-- Introduction -->
 
-<div class="legal-section">
+        <section>
 
-<h3>1. Ownership of Content</h3>
+            <p>
+                Pakka respects intellectual property rights and expects all users
+                to do the same.
+            </p>
 
-<p>
-All original content created by users on Pakka belongs to the creator.
-Authors keep full ownership of their stories and written work.
-</p>
+            <p>
+                This Copyright & Takedown Policy explains how copyright and
+                intellectual property complaints are handled on Pakka.
+            </p>
 
-</div>
+            <p>
+                This Policy forms part of the Pakka Terms of Service.
+            </p>
 
-<div class="legal-section">
+            <p>
+                By using Pakka, you agree to comply with this Policy.
+            </p>
 
-<h3>2. Platform License</h3>
+        </section>
 
-<p>
-By publishing content on Pakka, you allow us a non-exclusive license to display,
-store, and distribute your content within the platform.
-</p>
+        <!-- 1 -->
 
-</div>
+        <section>
 
-<div class="legal-section">
+            <h2>1. RESPECT FOR INTELLECTUAL PROPERTY</h2>
 
-<h3>3. Copyright Violation</h3>
+            <p>
+                Users may publish only content that they have the legal right
+                to publish and, where applicable, monetize.
+            </p>
 
-<p>
-You must not upload or publish content that belongs to someone else without permission.
-</p>
+            <p>This applies to:</p>
 
-<ul>
-<li>No copying stories from other authors.</li>
-<li>No reposting copyrighted books or chapters.</li>
-<li>No plagiarism of any kind.</li>
-</ul>
+            <ul>
+                <li>Stories</li>
+                <li>Novels</li>
+                <li>Chapters</li>
+                <li>Premium Chapters</li>
+                <li>Images</li>
+                <li>Cover artwork</li>
+                <li>Comments</li>
+                <li>Reviews</li>
+                <li>Other uploaded materials</li>
+            </ul>
 
-</div>
+            <p>
+                Users are solely responsible for ensuring they possess all
+                necessary rights.
+            </p>
 
-<div class="legal-section">
+        </section>
 
-<h3>4. DMCA / Takedown</h3>
+        <!-- 2 -->
 
-<p>
-If you believe your copyrighted work has been used without permission,
-you can request removal by contacting us.
-We will review and remove violating content if necessary.
-</p>
+        <section>
 
-</div>
+            <h2>2. COPYRIGHT INFRINGEMENT</h2>
 
-<div class="legal-section">
+            <p>
+                Copyright infringement may include, but is not limited to:
+            </p>
 
-<h3>5. Repeat Violations</h3>
+            <ul>
+                <li>Uploading another person's story without permission</li>
+                <li>Copying chapters from books or websites</li>
+                <li>Reposting copyrighted works</li>
+                <li>Uploading stolen cover art</li>
+                <li>Monetizing content that you do not own</li>
+                <li>Republishing translations without authorization</li>
+            </ul>
 
-<p>
-Users who repeatedly violate copyright rules may have their accounts suspended or permanently banned.
-</p>
+            <p>
+                Copyright infringement is prohibited.
+            </p>
 
-</div>
+        </section>
 
-<div class="legal-section">
+        <!-- 3 -->
 
-<h3>6. Contact</h3>
+        <section>
 
-<p>
-Copyright issues: pakkasupport@gmail.com
-</p>
+            <h2>3. FAN FICTION</h2>
 
-</div>
+            <p>
+                Pakka permits fan fiction.
+            </p>
 
-<a href="{{ url()->previous() }}" class="back-btn">← Back</a>
+            <p>However:</p>
+
+            <ul>
+                <li>Copyright owners retain their intellectual property rights.</li>
+                <li>Fan fiction may not be legally monetizable in all circumstances.</li>
+                <li>Rights holders may request removal of fan fiction that infringes their rights.</li>
+            </ul>
+
+            <p>
+                Pakka does not guarantee that fan fiction may remain available
+                or monetized.
+            </p>
+
+            <p>
+                Pakka reserves the right to remove fan fiction if necessary
+                to reduce legal risk or comply with rights holder requests.
+            </p>
+
+        </section>
+
+        <!-- 4 -->
+
+        <section>
+
+            <h2>4. AI-GENERATED CONTENT</h2>
+
+            <p>
+                AI-generated and AI-assisted content is permitted.
+            </p>
+
+            <p>
+                However, users remain responsible for ensuring that such content:
+            </p>
+
+            <ul>
+                <li>Does not infringe copyrights</li>
+                <li>Does not reproduce protected works unlawfully</li>
+                <li>Does not violate intellectual property rights</li>
+            </ul>
+
+            <p>
+                Claims that content was generated by artificial intelligence
+                do not excuse infringement.
+            </p>
+
+        </section>
+
+        <!-- 5 -->
+
+        <section>
+
+            <h2>5. SUBMITTING A COPYRIGHT COMPLAINT</h2>
+
+            <p>
+                If you believe content on Pakka infringes your copyright,
+                you may submit a written notice to:
+            </p>
+
+            <p>
+                <strong>Email:</strong> support@pakka.com
+            </p>
+
+            <h3>Your notice should include:</h3>
+
+            <h4>Identification of the copyrighted work</h4>
+
+            <p>
+                Describe the work you believe has been infringed.
+            </p>
+
+            <h4>Identification of the allegedly infringing material</h4>
+
+            <p>
+                Provide sufficient information for us to locate the material,
+                including:
+            </p>
+
+            <ul>
+                <li>Story title</li>
+                <li>Chapter title</li>
+                <li>Author username</li>
+                <li>URL</li>
+                <li>Screenshots where available</li>
+            </ul>
+
+            <h4>Contact information</h4>
+
+            <p>Provide:</p>
+
+            <ul>
+                <li>Full name</li>
+                <li>Email address</li>
+                <li>Organization name (if applicable)</li>
+            </ul>
+
+            <h4>Good-faith statement</h4>
+
+            <p>
+                A statement that you have a good-faith belief that the use
+                is not authorized.
+            </p>
+
+            <h4>Accuracy statement</h4>
+
+            <p>
+                A statement that the information provided is accurate and
+                that you are the copyright owner or authorized to act on
+                behalf of the owner.
+            </p>
+
+        </section>
+
+        <!-- 6 -->
+
+        <section>
+
+            <h2>6. INCOMPLETE COMPLAINTS</h2>
+
+            <p>
+                Pakka may decline to process complaints that:
+            </p>
+
+            <ul>
+                <li>Lack sufficient information</li>
+                <li>Cannot identify the allegedly infringing material</li>
+                <li>Are clearly abusive</li>
+                <li>Are fraudulent</li>
+                <li>Are submitted by unauthorized parties</li>
+            </ul>
+
+            <p>
+                We may request additional information before taking action.
+            </p>
+
+        </section>
+
+        <!-- 7 -->
+
+        <section>
+
+            <h2>7. INVESTIGATION PROCESS</h2>
+
+            <p>
+                Upon receiving a complaint, Pakka may:
+            </p>
+
+            <ul>
+                <li>Review the complaint</li>
+                <li>Request additional information</li>
+                <li>Contact the uploader</li>
+                <li>Temporarily restrict access</li>
+                <li>Remove content</li>
+                <li>Disable monetization</li>
+                <li>Suspend accounts</li>
+            </ul>
+
+            <p>
+                Pakka reserves discretion in determining appropriate action.
+            </p>
+
+        </section>
+
+        <!-- 8 -->
+
+        <section>
+
+            <h2>8. TEMPORARY REMOVAL</h2>
+
+            <p>
+                Where reasonably necessary, Pakka may temporarily:
+            </p>
+
+            <ul>
+                <li>Hide stories</li>
+                <li>Disable Premium Chapters</li>
+                <li>Restrict visibility</li>
+                <li>Suspend monetization</li>
+                <li>Restrict accounts</li>
+            </ul>
+
+            <p>
+                Temporary action does not constitute a final determination
+                of infringement.
+            </p>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- 9. COUNTER-NOTICES -->
+        <!-- ========================= -->
+
+        <section>
+
+            <h2>9. COUNTER-NOTICES</h2>
+
+            <p>
+                If your content has been removed and you believe it was removed in error,
+                you may submit a counter-notice.
+            </p>
+
+            <p>A counter-notice should include:</p>
+
+            <ul>
+                <li>Your full name</li>
+                <li>Contact information</li>
+                <li>Identification of removed content</li>
+                <li>Explanation of why you believe removal was incorrect</li>
+                <li>A statement made in good faith that you believe removal occurred in error</li>
+            </ul>
+
+            <p>Pakka may request additional information where reasonably necessary.</p>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- 10. RESTORATION OF CONTENT -->
+        <!-- ========================= -->
+
+        <section>
+
+            <h2>10. RESTORATION OF CONTENT</h2>
+
+            <p>
+                After receiving a counter-notice, Pakka may:
+            </p>
+
+            <ul>
+                <li>Restore content</li>
+                <li>Maintain restrictions</li>
+                <li>Request additional information</li>
+                <li>Await resolution between the parties</li>
+                <li>Take any other action reasonably necessary</li>
+            </ul>
+
+            <p>Pakka is not obligated to restore content.</p>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- 11. REPEAT INFRINGERS -->
+        <!-- ========================= -->
+
+        <section>
+
+            <h2>11. REPEAT INFRINGERS</h2>
+
+            <ul>
+                <li>Warnings</li>
+                <li>Removal of stories</li>
+                <li>Removal of Premium Chapters</li>
+                <li>Suspension of monetization</li>
+                <li>Account suspension</li>
+                <li>Permanent account termination</li>
+            </ul>
+
+            <p>
+                Pakka reserves sole discretion in determining whether a user qualifies
+                as a repeat infringer.
+            </p>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- 12. MONETIZATION DURING DISPUTES -->
+        <!-- ========================= -->
+
+        <section>
+
+            <h2>12. MONETIZATION DURING DISPUTES</h2>
+
+            <p>Content subject to copyright disputes may have monetization restricted.</p>
+
+            <ul>
+                <li>Disable Premium Chapters</li>
+                <li>Freeze earnings</li>
+                <li>Delay payouts</li>
+                <li>Reverse transactions</li>
+                <li>Remove monetization privileges</li>
+            </ul>
+
+            <p>
+                These actions may remain in place until disputes are resolved.
+            </p>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- 13. FORFEITURE OF INFRINGING EARNINGS -->
+        <!-- ========================= -->
+
+        <section>
+
+            <h2>13. FORFEITURE OF INFRINGING EARNINGS</h2>
+
+            <ul>
+                <li>Reverse associated earnings</li>
+                <li>Cancel pending payouts</li>
+                <li>Deduct amounts from future earnings</li>
+                <li>Permanently disable monetization</li>
+            </ul>
+
+            <p>
+                Forfeiture shall be limited to amounts reasonably associated with infringing activity.
+            </p>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- 14. TRADEMARK COMPLAINTS -->
+        <!-- ========================= -->
+
+        <section>
+
+            <h2>14. TRADEMARK COMPLAINTS</h2>
+
+            <p>Trademark complaints should include:</p>
+
+            <ul>
+                <li>Identification of the trademark</li>
+                <li>Registration information where available</li>
+                <li>Identification of allegedly infringing material</li>
+                <li>Contact information</li>
+                <li>Good-faith statement</li>
+            </ul>
+
+            <p><strong>Email:</strong> support@pakka.com</p>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- 15. FALSE OR FRAUDULENT CLAIMS -->
+        <!-- ========================= -->
+
+        <section>
+
+            <h2>15. FALSE OR FRAUDULENT CLAIMS</h2>
+
+            <ul>
+                <li>Filing complaints against content you do not own</li>
+                <li>Filing complaints to harass competitors</li>
+                <li>Filing complaints to silence criticism</li>
+                <li>Misrepresenting ownership rights</li>
+            </ul>
+
+            <p>
+                Pakka may take action including:
+            </p>
+
+            <ul>
+                <li>Rejecting complaints</li>
+                <li>Restricting reporting privileges</li>
+                <li>Suspending accounts</li>
+                <li>Terminating accounts</li>
+            </ul>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- 16. PUBLIC DOMAIN MATERIAL -->
+        <!-- ========================= -->
+
+        <section>
+
+            <h2>16. PUBLIC DOMAIN MATERIAL</h2>
+
+            <ul>
+                <li>Works in the public domain</li>
+                <li>Materials released under open licenses</li>
+                <li>Works with valid user permission</li>
+            </ul>
+
+            <p>
+                Complainants should ensure material is actually protected before submitting notices.
+            </p>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- 17. LINKS TO THIRD-PARTY CONTENT -->
+        <!-- ========================= -->
+
+        <section>
+
+            <h2>17. LINKS TO THIRD-PARTY CONTENT</h2>
+
+            <p>
+                Pakka may contain links to external websites.
+            </p>
+
+            <p>
+                Complaints should generally be directed to the operator of the external site.
+            </p>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- 18. NO LEGAL ADVICE -->
+        <!-- ========================= -->
+
+        <section>
+
+            <h2>18. NO LEGAL ADVICE</h2>
+
+            <p>Pakka does not provide legal advice.</p>
+
+            <p>
+                Users should seek independent legal advice for intellectual property matters.
+            </p>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- 19. LIMITATION OF LIABILITY -->
+        <!-- ========================= -->
+
+        <section>
+
+            <h2>19. LIMITATION OF LIABILITY</h2>
+
+            <p>Pakka shall not be liable for:</p>
+
+            <ul>
+                <li>Removal of content</li>
+                <li>Temporary restrictions</li>
+                <li>Loss of monetization</li>
+                <li>Delays in processing notices</li>
+                <li>Disputes between users</li>
+                <li>Indirect or consequential damages</li>
+            </ul>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- 20. GOVERNING LAW -->
+        <!-- ========================= -->
+
+        <section>
+
+            <h2>20. GOVERNING LAW AND DISPUTE RESOLUTION</h2>
+
+            <ul>
+                <li>Good-faith negotiation (30 days)</li>
+                <li>Mediation</li>
+                <li>Arbitration in Phnom Penh, Cambodia</li>
+            </ul>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- 21. CHANGES -->
+        <!-- ========================= -->
+
+        <section>
+
+            <h2>21. CHANGES TO THIS POLICY</h2>
+
+            <p>
+                Updated versions become effective upon publication.
+            </p>
+
+            <p>
+                Continued use of Pakka constitutes acceptance of revised versions.
+            </p>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- 22. CONTACT -->
+        <!-- ========================= -->
+
+        <section>
+
+            <h2>22. CONTACT US</h2>
+
+            <p><strong>Pakka Co., Ltd.</strong></p>
+            <p><strong>Email:</strong> pakkasupport@gmail.com</p>
+
+        </section>
+
+    </div>
+
+    <a href="{{ url()->previous() }}" class="back-btn">← Back</a>
 
 </div>
 

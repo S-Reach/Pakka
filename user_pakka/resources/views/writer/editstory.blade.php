@@ -225,7 +225,6 @@
                         {{ __('ui.update_story') }}
                     </button>
                 </div>
-                
             </div>
         </div>
 
