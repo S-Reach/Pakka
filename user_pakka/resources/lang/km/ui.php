@@ -181,6 +181,7 @@ return [
     'kingdom' => 'ព្រះរាជាណាចក្រ',
     'language' => 'ភាសា',
     'last_name' => 'នាមត្រកូល',
+    'last_read' => 'កាលអានចុងក្រោយ',
     'latest_stories' => 'រឿងថ្មីៗ',
     'latest' => 'ថ្មីបំផុត',
     'library' => 'បណ្ណាល័យ',

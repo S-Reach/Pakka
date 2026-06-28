@@ -88,6 +88,10 @@ body{
     box-shadow:0 4px 14px rgba(0,0,0,0.05);
     transition:0.3s;
     scroll-snap-align: start;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
 }
 
 .story-card:hover{transform:translateY(-5px);}

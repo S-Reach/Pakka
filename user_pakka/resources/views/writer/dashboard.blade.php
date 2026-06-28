@@ -5,6 +5,7 @@
 
 <title>Writer Dashboard</title>
 <link rel="stylesheet" href="{{ asset('css/writer/dashboard.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Battambang:wght@300;400;700&display=swap" rel="stylesheet">
 <script src="{{ asset('js/writer/dashboard.js') }}" defer></script>
 
 <div class="dashboard-container">
@@ -88,7 +89,9 @@
                         background:#fff;
                         font-size:13px;
                         color:#374151;
-                        cursor:pointer;">
+                        cursor:pointer;
+                        font-family: 'Battambang', sans-serif;
+                        font-size: 16px;">
                 <option value="latest" {{ $sort=='latest' ? 'selected' : '' }}>
                     {{ __('ui.latest') }}
                 </option>

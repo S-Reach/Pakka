@@ -7,7 +7,6 @@
 
 <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 
-
 {{-- HERO --}}
 <div class="hero">
     <h1>{{ __('ui.home_title') }}</h1>
@@ -31,33 +30,38 @@
 
         @forelse($readingStories as $library)
 
-        <div class="story-card">
+            <a href="{{ route('reader.storydetail', $library->story->id) }}" class="story-card">
 
-            <div class="story-image">
+                <div class="story-image">
 
-                @if($library->story->cover_image)
-                    <img src="{{ asset('storage/'.$library->story->cover_image) }}">
-                @else
-                    <div class="story-placeholder">📚</div>
-                @endif
+                    @if($library->story->cover_image)
+                        <img src="{{ asset('storage/'.$library->story->cover_image) }}">
+                    @else
+                        <div class="story-placeholder">📚</div>
+                    @endif
 
-            </div>
-
-            <div class="story-content">
-
-                <a href="{{ route('reader.storydetail', $library->story->id) }}" class="story-title">
-                    {{ Str::limit($library->story->title, 40) }}
-                </a>
-
-                <div class="story-author">
-                    by {{ $library->story->user->username ?? 'Unknown' }}
                 </div>
 
-                <div class="story-meta">
-                    <span>Last read: {{ $library->lastChapter ? $library->lastChapter->title : 'Start Reading' }}</span>
+                <div class="story-content">
+
+                    <div class="story-title">
+                        {{ Str::limit($library->story->title, 40) }}
+                    </div>
+
+                    <div class="story-author">
+                        {{ __('ui.by') }} {{ $library->story->user->username ?? 'Unknown' }}
+                    </div>
+
+                    <div class="story-meta">
+                        <span>
+                            {{ __('ui.last_read') }}:
+                            {{ $library->lastChapter ? $library->lastChapter->title : 'Start Reading' }}
+                        </span>
+                    </div>
+
                 </div>
-            </div>
-        </div>
+
+            </a>
 
         @empty
             <p style="color:#6b7280;">{{ __('ui.no_reading_history') }}</p>
@@ -69,211 +73,243 @@
 
 {{-- LATEST --}}
 <div class="section">
+
     <div class="section-header">
         <h2>🕒 {{ __('ui.latest') }}</h2>
         <a href="{{ route('browse.latest') }}" class="view-all">{{ __('ui.view_all') }} →</a>
     </div>
 
     <div class="story-grid">
+
         @foreach($latestStories as $story)
-        <div class="story-card">
 
-            <div class="story-image">
+            <a href="{{ route('reader.storydetail', $story->id) }}" class="story-card">
 
-                @if($story->cover_image)
-                    <img src="{{ asset('storage/'.$story->cover_image) }}">
-                @else
-                    <div class="story-placeholder">📚</div>
-                @endif
+                <div class="story-image">
 
-                @if($story->hasPaidChapters())
-                    <div class="premium-badge">Premium</div>
-                @endif
+                    @if($story->cover_image)
+                        <img src="{{ asset('storage/'.$story->cover_image) }}">
+                    @else
+                        <div class="story-placeholder">📚</div>
+                    @endif
 
-            </div>
+                    @if($story->hasPaidChapters())
+                        <div class="premium-badge">Premium</div>
+                    @endif
 
-            <div class="story-content">
-                <a href="{{ route('reader.storydetail', $story->id) }}" class="story-title">
-                    {{ Str::limit($story->title,40) }}
-                </a>
-
-                <div class="story-author">
-                    by {{ $story->user->username ?? 'Unknown' }}
                 </div>
 
-                <div class="story-meta">
-                    <span>👁 {{ $story->views ?? 0 }}</span>
-                    <span>💬 {{ $story->comments_count ?? 0 }}</span>
-                    <span>⭐ {{ $story->rating ?? 0 }}</span>
-                </div>
-            </div>
+                <div class="story-content">
 
-        </div>
+                    <div class="story-title">
+                        {{ Str::limit($story->title,40) }}
+                    </div>
+
+                    <div class="story-author">
+                        by {{ $story->user->username ?? 'Unknown' }}
+                    </div>
+
+                    <div class="story-meta">
+                        <span>👁 {{ $story->views ?? 0 }}</span>
+                        <span>💬 {{ $story->comments_count ?? 0 }}</span>
+                        <span>⭐ {{ $story->rating ?? 0 }}</span>
+                    </div>
+
+                </div>
+
+            </a>
+
         @endforeach
+
     </div>
 </div>
 
 {{-- TRENDING --}}
 <div class="section">
+
     <div class="section-header">
         <h2>📈 {{ __('ui.trending_stories') }}</h2>
         <a href="{{ route('browse.trending') }}" class="view-all">{{ __('ui.view_all') }} →</a>
     </div>
 
     <div class="story-grid">
+
         @foreach($trendingStories as $story)
-        <div class="story-card">
 
-            <div class="story-image">
+            <a href="{{ route('reader.storydetail', $story->id) }}" class="story-card">
 
-                @if($story->cover_image)
-                    <img src="{{ asset('storage/'.$story->cover_image) }}">
-                @else
-                    <div class="story-placeholder">📚</div>
-                @endif
+                <div class="story-image">
 
-            </div>
+                    @if($story->cover_image)
+                        <img src="{{ asset('storage/'.$story->cover_image) }}">
+                    @else
+                        <div class="story-placeholder">📚</div>
+                    @endif
 
-            <div class="story-content">
-                <a href="{{ route('reader.storydetail', $story->id) }}" class="story-title">
-                    {{ Str::limit($story->title,40) }}
-                </a>
-
-                <div class="story-author">
-                    by {{ $story->user->username ?? 'Unknown' }}
                 </div>
 
-                <div class="story-meta">
-                    <span>👁 {{ $story->views ?? 0 }}</span>
-                    <span>💬 {{ $story->comments_count ?? 0 }}</span>
-                    <span>⭐ {{ $story->rating ?? 0 }}</span>
-                </div>
-            </div>
+                <div class="story-content">
 
-        </div>
+                    <div class="story-title">
+                        {{ Str::limit($story->title,40) }}
+                    </div>
+
+                    <div class="story-author">
+                        by {{ $story->user->username ?? 'Unknown' }}
+                    </div>
+
+                    <div class="story-meta">
+                        <span>👁 {{ $story->views ?? 0 }}</span>
+                        <span>💬 {{ $story->comments_count ?? 0 }}</span>
+                        <span>⭐ {{ $story->rating ?? 0 }}</span>
+                    </div>
+
+                </div>
+
+            </a>
+
         @endforeach
+
     </div>
 </div>
 
 {{-- BEST COMPLETE --}}
 <div class="section">
+
     <div class="section-header">
         <h2>✅ {{ __('ui.best_complete') }}</h2>
         <a href="{{ route('browse.complete') }}" class="view-all">{{ __('ui.view_all') }} →</a>
     </div>
 
     <div class="story-grid">
+
         @foreach($completedStories as $story)
-        <div class="story-card">
 
-            <div class="story-image">
+            <a href="{{ route('reader.storydetail', $story->id) }}" class="story-card">
 
-                @if($story->cover_image)
-                    <img src="{{ asset('storage/'.$story->cover_image) }}">
-                @else
-                    <div class="story-placeholder">📚</div>
-                @endif
+                <div class="story-image">
 
-                @if($story->hasPaidChapters())
-                    <div class="premium-badge">Premium</div>
-                @endif
+                    @if($story->cover_image)
+                        <img src="{{ asset('storage/'.$story->cover_image) }}">
+                    @else
+                        <div class="story-placeholder">📚</div>
+                    @endif
 
-            </div>
+                    @if($story->hasPaidChapters())
+                        <div class="premium-badge">Premium</div>
+                    @endif
 
-            <div class="story-content">
-                <a href="{{ route('reader.storydetail', $story->id) }}" class="story-title">
-                    {{ Str::limit($story->title,40) }}
-                </a>
-
-                <div class="story-author">
-                    by {{ $story->user->username ?? 'Unknown' }}
                 </div>
 
-                <div class="story-meta">
-                    <span>👁 {{ $story->views ?? 0 }}</span>
-                    <span>💬 {{ $story->comments_count ?? 0 }}</span>
-                    <span>⭐ {{ $story->rating ?? 0 }}</span>
-                </div>
-            </div>
+                <div class="story-content">
 
-        </div>
+                    <div class="story-title">
+                        {{ Str::limit($story->title,40) }}
+                    </div>
+
+                    <div class="story-author">
+                        by {{ $story->user->username ?? 'Unknown' }}
+                    </div>
+
+                    <div class="story-meta">
+                        <span>👁 {{ $story->views ?? 0 }}</span>
+                        <span>💬 {{ $story->comments_count ?? 0 }}</span>
+                        <span>⭐ {{ $story->rating ?? 0 }}</span>
+                    </div>
+
+                </div>
+
+            </a>
+
         @endforeach
+
     </div>
 </div>
 
 {{-- BEST ONGOING --}}
 <div class="section">
+
     <div class="section-header">
         <h2>📘 {{ __('ui.best_ongoing') }}</h2>
         <a href="{{ route('browse.ongoing') }}" class="view-all">{{ __('ui.view_all') }} →</a>
     </div>
 
     <div class="story-grid">
+
         @foreach($ongoingStories as $story)
-        <div class="story-card">
 
-            <div class="story-image">
+            <a href="{{ route('reader.storydetail', $story->id) }}" class="story-card">
 
-                @if($story->cover_image)
-                    <img src="{{ asset('storage/'.$story->cover_image) }}">
-                @else
-                    <div class="story-placeholder">📚</div>
-                @endif
+                <div class="story-image">
 
-                @if($story->hasPaidChapters())
-                    <div class="premium-badge">Premium</div>
-                @endif
+                    @if($story->cover_image)
+                        <img src="{{ asset('storage/'.$story->cover_image) }}">
+                    @else
+                        <div class="story-placeholder">📚</div>
+                    @endif
 
-            </div>
+                    @if($story->hasPaidChapters())
+                        <div class="premium-badge">Premium</div>
+                    @endif
 
-            <div class="story-content">
-                <a href="{{ route('reader.storydetail', $story->id) }}" class="story-title">
-                    {{ Str::limit($story->title,40) }}
-                </a>
-
-                <div class="story-author">
-                    by {{ $story->user->username ?? 'Unknown' }}
                 </div>
 
-                <div class="story-meta">
-                    <span>👁 {{ $story->views ?? 0 }}</span>
-                    <span>💬 {{ $story->comments_count ?? 0 }}</span>
-                    <span>⭐ {{ $story->rating ?? 0 }}</span>
-                </div>
-            </div>
+                <div class="story-content">
 
-        </div>
+                    <div class="story-title">
+                        {{ Str::limit($story->title,40) }}
+                    </div>
+
+                    <div class="story-author">
+                        by {{ $story->user->username ?? 'Unknown' }}
+                    </div>
+
+                    <div class="story-meta">
+                        <span>👁 {{ $story->views ?? 0 }}</span>
+                        <span>💬 {{ $story->comments_count ?? 0 }}</span>
+                        <span>⭐ {{ $story->rating ?? 0 }}</span>
+                    </div>
+
+                </div>
+
+            </a>
+
         @endforeach
+
     </div>
 </div>
 
 {{-- FOOTER --}}
 <div class="footer">
+
     <div class="footer-grid">
+
         <div>
             <div class="footer-logo-circle">
-                <img src="{{ asset('images/logo.png') }}" alt="Pakka Logo" class="footer-pk-logo-img">
+                <img src="{{ asset('images/logo.png') }}" class="footer-pk-logo-img">
             </div>
             <h4>Pakka</h4>
-            <p>{{ __('ui.footer_about') }} </p>
+            <p>{{ __('ui.footer_about') }}</p>
         </div>
 
         <div>
             <h4>{{ __('ui.footer_discover') }}</h4>
             <a href="{{ route('browse') }}">{{ __('ui.browse') }}</a>
             <a href="{{ route('browse.trending') }}">{{ __('ui.trending') }}</a>
-            <a href="{{ route('writer.dashboard')}}">{{ __('ui.write') }}</a>
+            <a href="{{ route('writer.dashboard') }}">{{ __('ui.write') }}</a>
         </div>
 
         <div>
             <h4>{{ __('ui.footer_help') }}</h4>
-            <a href="{{route('privacy')}}">{{ __('ui.footer_privacy') }}</a>
-            <a href="{{route('terms')}}">{{ __('ui.footer_terms') }}</a>
-            <a href="{{route('community')}}">{{ __('ui.community') }}</a>
-            <a href="{{route('copyright')}}">{{ __('ui.copyright') }}</a>
+            <a href="{{ route('privacy') }}">{{ __('ui.footer_privacy') }}</a>
+            <a href="{{ route('terms') }}">{{ __('ui.footer_terms') }}</a>
+            <a href="{{ route('community') }}">{{ __('ui.community') }}</a>
+            <a href="{{ route('copyright') }}">{{ __('ui.copyright') }}</a>
             <p>{{ __('ui.footer_contact') }}: pakkasupport@gmail.com</p>
         </div>
+
     </div>
+
 </div>
 
 @endsection

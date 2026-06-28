@@ -46,9 +46,10 @@
             border: 2px solid #d1d5db;
             border-radius:12px;
             background:#f8f8f8;
-            font-size:14px; /* ⬅️ smaller text */
+            font-size:16px; /* ⬅️ smaller text */
             outline:none;
             box-sizing:border-box;
+            font-family: 'Battambang', sans-serif;
         }
 
         .search-icon{
@@ -63,24 +64,28 @@
         /* GENRE BOX */
         .genre-box {
             width: 100%;
-            margin-bottom:20px;
+            margin-bottom: 20px;
+            font-family: 'Battambang', sans-serif; /* 👈 Khmer font only here */
         }
 
         .genre-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
+            font-family: 'Battambang', sans-serif;
         }
 
         .genre-btn {
-            padding: 8px 14px;
+            padding: 10px 16px; /* slightly bigger */
             border: 1px solid #d1d5db;
             background: white;
             border-radius: 20px;
             cursor: pointer;
-            font-size: 13px;
+            font-size: 15px; /* 👈 bigger than 13px */
             transition: 0.2s;
             color: #374151;
+
+            font-family: 'Battambang', sans-serif; /* 👈 Khmer font */
         }
 
         .genre-btn:hover {
@@ -121,10 +126,11 @@
             border:none;
             border-radius:10px;
             background:white;
-            font-size:14px; /* ⬅️ smaller */
+            font-size:16px; /* ⬅️ smaller */
             outline:none;
             min-width:160px; /* ⬅️ smaller */
             color:#111827;
+            font-family: 'Battambang', sans-serif;
         }
 
         .filter-btn{

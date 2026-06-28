@@ -182,6 +182,7 @@ return [
     'kingdom' => 'Kingdom',
     'language' => 'Language',
     'last_name' => 'Last Name',
+    'last_read' => 'Last read',
     'latest_stories' => 'Latest Stories',
     'latest' => 'Latest',
     'library' => 'Library',

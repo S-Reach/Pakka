@@ -8,6 +8,7 @@
 
 
 <div class="wrapper">
+    <a href="{{ url()->previous() }}" class="back-btn">← Back</a>
 
     <h2>{{ __('ui.profile_information') }}</h2>
     <p class="subtitle">{{ __('ui.manage_profile_details') }}</p>
@@ -48,7 +49,7 @@
             <div class="stats-card">
                 <h4>{{ __('ui.account_stats') }}</h4>
 
-                <div class="stat-row">
+                <a href="{{ route('writerprofile', $user->id) }}" class="stat-row link">
                     <span class="stat-left">
                         <svg width="18" height="18" fill="none" stroke="#6b7280" stroke-width="2" viewBox="0 0 24 24">
                             <path d="M17 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -58,9 +59,9 @@
                         {{ __('ui.followers') }}
                     </span>
                     <strong id="followersCount">{{ $followers  }}</strong>
-                </div>
+                </a>
 
-                <div class="stat-row">
+                <a href="{{ route('writerprofile', $user->id) }}" class="stat-row link">
                     <span class="stat-left">
                         <svg width="18" height="18" fill="none" stroke="#6b7280" stroke-width="2" viewBox="0 0 24 24">
                             <path d="M17 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -70,7 +71,7 @@
                         {{ __('ui.following') }}
                     </span>
                     <strong>{{ $following }}</strong>
-                </div>
+                </a>
 
                 <div class="stat-row">
                     <span class="stat-left">

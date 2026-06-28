@@ -327,16 +327,18 @@
                             </div>
 
                             <small style="color:#9ca3af;">
-                                {{ $followersCount }} followers
+                                {{ $followersCount }} {{ __('ui.followers') }}
                             </small>
 
                         </div>
 
                     </div>
 
-                    <button id="followBtn" class="follow">
-                        {{ $isFollowing ? 'Unfollow' : 'Follow' }}
-                    </button>
+                    @if(!auth()->check() || auth()->id() != $story->user_id)
+                        <button id="followBtn" class="follow">
+                            {{ $isFollowing ? 'Unfollow' : 'Follow' }}
+                        </button>
+                    @endif
 
                 </div>
 
@@ -420,7 +422,7 @@
                         href="{{ route('reader.readchapters', [$story->id, $chapter->id]) }}">
 
                             <strong>
-                                Chapter {{ $chapter->chapter_number }}:
+                                {{ __('ui.chapter') }} {{ $chapter->chapter_number }}:
                                 {{ $chapter->title }}
                             </strong>
 
@@ -698,7 +700,7 @@
                             </div>
                         </div>
                         @empty
-                        <p>No comments yet.</p>
+                        <p>{{ __('ui.no_comments_yet') }}</p>
                         @endforelse
                 </div>
         </div>

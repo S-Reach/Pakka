@@ -16,6 +16,13 @@ class FollowController extends Controller
             ], 401);
         }
 
+        // Prevent users from following themselves
+        if (auth()->id() == $id) {
+            return response()->json([
+                'message' => 'You cannot follow yourself.'
+            ], 403);
+        }
+
         $follow = Follow::where('follower_id', auth()->id())
             ->where('following_id', $id)
             ->first();

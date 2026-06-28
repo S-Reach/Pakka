@@ -4,6 +4,10 @@ body{
     color:#1f2937;
 }
 
+.khmer {
+    font-family: 'Battambang', sans-serif;
+}
+
 /* CONTAINER */
 .container{
     width:82%;
@@ -94,6 +98,8 @@ body{
     cursor:pointer;
     font-weight:600;
     transition:.2s;
+    font-family: 'Battambang', sans-serif;
+    font-size: 16px; /* 👈 slightly bigger */
 }
 
 .btn:hover{
@@ -130,7 +136,7 @@ body{
 /* STATS */
 .stats{
     margin-top:18px;
-    font-size:13px;
+    font-size:15px;
 }
 
 .stats div{
@@ -224,6 +230,10 @@ body{
     cursor:pointer;
 }
 
+.follow:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
 /* DESC */
 .desc{
     margin-top:14px;
@@ -265,7 +275,7 @@ body{
 }
 
 .chapter strong{
-    font-size:15px;
+    font-size:18px;
 }
 
 .badge{

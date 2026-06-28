@@ -38,7 +38,7 @@
         </a>
     @endif
 
-    <h1>{{ __('ui.reading_preference') }}</h1>
+    <h1>{{ __('ui.reading_preferences') }}</h1>
 
     <form method="POST" action="{{ route('preferences.save') }}">
         @csrf

@@ -5,6 +5,7 @@
 <head>
     <title>{{ __('ui.browse_library') }}</title>
     <link rel="stylesheet" href="{{ asset('css/browse.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
 <div class="browse-container">
@@ -60,7 +61,7 @@
                     __('ui.mystery'),
                     __('ui.romance'),
                     __('ui.horror'),
-                    __('ui.scifi'),
+                    __('ui.sci_fi'),
                     __('ui.thriller'),
                     __('ui.contemporary'),
                     __('ui.historical'),
@@ -173,7 +174,7 @@
     @else
 
         <div class="no-data">
-            No stories found.
+            {{ __('ui.no_results') }}
         </div>
 
     @endif

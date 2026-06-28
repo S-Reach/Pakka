@@ -5,8 +5,10 @@
 <link rel="stylesheet" href="{{ asset('css/writeprofile.css') }}">
 <script src="{{ asset('js/writeprofile.js') }}" defer></script>
 
-<div class="profile-page-wrapper">
+<a href="{{ url()->previous() }}" class="back-btn">← Back</a>
 
+<div class="profile-page-wrapper">
+    
     <!-- LEFT -->
     <div class="profile-left">
         <div class="profile-card">

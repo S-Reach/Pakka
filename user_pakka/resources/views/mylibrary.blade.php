@@ -25,7 +25,9 @@
 
     </div>
 
+    <!-- ===================== -->
     <!-- SAVED STORIES -->
+    <!-- ===================== -->
     <div id="saved-tab">
 
         <div class="stories-grid">
@@ -36,12 +38,12 @@
                     $story = $library->story;
                 @endphp
 
-                <a href="{{ route('story.show', $story->id) }}"
-                   class="card-link">
+                <a href="{{ route('story.show', $story->id) }}" class="card-link">
 
                     <div class="card">
 
                         <div class="card-image">
+
                             @if($story->hasPaidChapters())
                                 <div class="premium-tag">Premium</div>
                             @endif
@@ -53,6 +55,7 @@
                                     <div style="font-size:50px;">📚</div>
                                 </div>
                             @endif
+
                         </div>
 
                         <div class="card-body">
@@ -89,7 +92,9 @@
 
     </div>
 
+    <!-- ===================== -->
     <!-- READING HISTORY -->
+    <!-- ===================== -->
     <div id="history-tab" style="display:none;">
 
         <div class="stories-grid">
@@ -100,50 +105,42 @@
                     $story = $history->story;
                 @endphp
 
-                <a href="{{ route('story.show', $story->id) }}"
-                   class="card-link">
+                <a href="{{ route('story.show', $story->id) }}" class="card-link">
 
-                    <div class="card">
+                    <div class="card history-card">
 
-                        <div class="image-wrapper">
+                        <div class="card-image">
 
                             @if($story->cover_image)
-
-                                <img src="{{ asset('storage/' . $story->cover_image) }}"
-                                    alt="{{ $story->title }}">
-
+                                <img src="{{ asset('storage/' . $story->cover_image) }}">
                             @else
-
-                                <div class="image-placeholder">
-
-                                    <div style="font-size:55px;">📚</div>
-
-                                    <span>No Cover Image</span>
-
+                                <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:#e5e7eb;">
+                                    <div style="font-size:50px;">📚</div>
                                 </div>
-
                             @endif
 
                             @if($story->hasPaidChapters())
-                                <div class="badge premium">
-                                    Premium
-                                </div>
+                                <div class="premium-tag">Premium</div>
                             @endif
 
                         </div>
 
-                        <div class="title">
-                            {{ $story->title }}
-                        </div>
+                        <div class="card-body">
 
-                        <div class="author">
-                            by {{ $story->user->username }}
-                        </div>
+                            <div class="card-title">
+                                {{ $story->title }}
+                            </div>
 
-                        <div class="meta">
-                            👁 {{ number_format($story->views) }}
-                            ❤️ {{ $story->likes()->count() }}
-                            ⭐ {{ $story->rating }}
+                            <div class="card-author">
+                                by {{ $story->user->username }}
+                            </div>
+
+                            <div class="meta">
+                                👁 {{ number_format($story->views) }}
+                                ❤️ {{ $story->likes()->count() }}
+                                ⭐ {{ $story->rating }}
+                            </div>
+
                         </div>
 
                     </div>
