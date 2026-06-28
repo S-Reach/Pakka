@@ -34,7 +34,7 @@ class StoryController extends Controller
             __('ui.virtual_reality'), __('ui.modern_day'), __('ui.historical'), __('ui.ancient_era'), __('ui.medieval'), __('ui.futuristic'), __('ui.post_apocalyptic'), __('ui.urban_fantasy'),
             __('ui.kingdom'), __('ui.revenge'), __('ui.survival'), __('ui.mystery'), __('ui.political_intrigue'), __('ui.war_strategy'), __('ui.rise_to_power'), __('ui.hidden_identity'),
             __('ui.tournament_arc'), __('ui.slice_of_life'), __('ui.tragedy'), __('ui.comedy'), __('ui.dark_fantasy'), __('ui.psychological'), __('ui.thriller'), __('ui.youth_love'), __('ui.family_saga'),
-           (__('ui.friendship')),(__('ui.redemption')),(__('ui.betrayal')),(__('ui.sacrifice')),(__('ui.reincarnation')),(__('ui.time_loop')),(__('ui.body_swap'))
+           (__('ui.friendship')),'Redemption',(__('ui.betrayal')),(__('ui.sacrifice')),(__('ui.reincarnation')),(__('ui.time_loop')),(__('ui.body_swap'))
         ];
 
         return view('writer.createstory', compact('genres', 'tags'));
@@ -159,12 +159,12 @@ class StoryController extends Controller
         $tags = [
             __('ui.anti_hero_lead'),__('ui.strong_lead'),__('ui.weak_to_strong'),__('ui.female_lead'),__('ui.male_lead'),__('ui.romance_subplot'),__('ui.magic'),
             __('ui.time_travel'),__('ui.reincarnation'),__('ui.system'),__('ui.school_life'),__('ui.overpowered_mc'),__('ui.genius_mc'),__('ui.cold_mc'),__('ui.soft_mc'),
-            __('ui.love_triangle'),__('ui.arranged_marriage'),__('ui.enemies_to_lovers'),__('ui.friends_to_lovers'),(__('ui.slow_burn')),'Harem','Reverse Harem',
-            __('ui.childhood_friends'),__('ui.game_system'),__('ui.parallel_world'),__('ui.cultivation'),__('ui.demon_world'),(__('ui.superpowers')),'Cyberpunk',
-            __('ui.virtual_reality'),(__(' ui.modern_day')),(__(' ui.historical')),(__(' ui.ancient_era')),(__('ui.medieval')),(__('ui.futuristic')),(__('ui.post_apocalyptic')),(__('ui.urban_fantasy')),
-            __('ui.kingdom'),(__('ui.revenge')),(__('ui.survival')),(__('ui.mystery')),(__('ui.political_intrigue')),(__(' ui.war_strategy')),(__('ui.rise_to_power')),(__('ui.hidden_identity')),
-            __('ui.tournament_arc'), __('ui.slice_of_life'), __('ui.tragedy'), __('ui.comedy'), __('ui.dark_fantasy'), __('ui.psychological'), __('ui.thriller'), __('ui.youth Love'), __('ui.family_saga'),
-            __('ui.friendship'), __('ui.redemption'), __('ui.betrayal'), __('ui.sacrifice'), __('ui.reincarnation'), __('ui.time_loop'), __('ui.body_swap')
+            __('ui.love_triangle'),__('ui.arranged_marriage'),__('ui.enemies_to_lovers'),__('ui.friends_to_lovers'),__('ui.slow_burn'),'Harem','Reverse Harem',
+            __('ui.childhood_friends'),(__('ui.game_system')),(__('ui.parallel_world')),(__('ui.cultivation')),(__('ui.demon_world')),(__('ui.superpowers')),'Cyberpunk',
+            __('ui.virtual_reality'), __('ui.modern_day'), __('ui.historical'), __('ui.ancient_era'), __('ui.medieval'), __('ui.futuristic'), __('ui.post_apocalyptic'), __('ui.urban_fantasy'),
+            __('ui.kingdom'), __('ui.revenge'), __('ui.survival'), __('ui.mystery'), __('ui.political_intrigue'), __('ui.war_strategy'), __('ui.rise_to_power'), __('ui.hidden_identity'),
+            __('ui.tournament_arc'), __('ui.slice_of_life'), __('ui.tragedy'), __('ui.comedy'), __('ui.dark_fantasy'), __('ui.psychological'), __('ui.thriller'), __('ui.youth_love'), __('ui.family_saga'),
+           (__('ui.friendship')),'Redemption',(__('ui.betrayal')),(__('ui.sacrifice')),(__('ui.reincarnation')),(__('ui.time_loop')),(__('ui.body_swap'))
         ];
 
         $warningsList = [

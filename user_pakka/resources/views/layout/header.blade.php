@@ -213,32 +213,20 @@
 .pk-logout-btn{
 
     width:100%;
-
     height:48px;
-
     padding:0 18px;
-
     display:flex;
-
     align-items:center;
-
     gap:12px;
-
     text-decoration:none;
-
     font-size:14px;
-
     font-weight:500;
-
     color:#374151;
-
     background:none;
-
     border:none;
-
     cursor:pointer;
-
     transition:0.2s;
+    font-family: 'Battambang', sans-serif;
 }
 
 /* icon alignment */
