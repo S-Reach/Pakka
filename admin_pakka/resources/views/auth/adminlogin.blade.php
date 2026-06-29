@@ -247,90 +247,61 @@
         @endif
 
         <!-- LOGIN FORM -->
-        <form action="{{ route('login.submit') }}"
-              method="POST">
-
+        <form action="{{ route('login.submit') }}" method="POST">
             @csrf
 
-            <!-- EMAIL -->
             <div class="form-group">
-
-                <label class="form-label">
-                    Email Address
-                </label>
-
+                <label class="form-label">Email Address</label>
                 <div class="input-wrapper">
-
-                    <input type="email"
-                           name="email"
-                           class="form-input"
-                           placeholder="Enter your email"
-                           value="{{ old('email') }}"
-                           required>
-
+                    <input
+                        type="email"
+                        name="email"
+                        class="form-input"
+                        placeholder="Enter your email"
+                        value="{{ old('email') }}"
+                        required
+                    >
                     <i class="fa-regular fa-envelope input-icon"></i>
-
                 </div>
 
                 @error('email')
-
-                    <span class="validation-error">
+                    <div class="validation-error">
                         {{ $message }}
-                    </span>
-
+                    </div>
                 @enderror
-
             </div>
 
-            <!-- PASSWORD -->
             <div class="form-group">
-
-                <label class="form-label">
-                    Password
-                </label>
-
+                <label class="form-label">Password</label>
                 <div class="input-wrapper">
-
-                    <input type="password"
+                    <input
+                        type="password"
                         id="password"
                         name="password"
                         class="form-input"
                         placeholder="Enter your password"
-                        required>
+                        required
+                    >
                     <i class="fa-solid fa-eye input-icon password-toggle"
-                        onclick="togglePassword('password', this)">
-                    </i>
-
+                    onclick="togglePassword('password', this)"></i>
                 </div>
 
                 @error('password')
-
-                    <span class="validation-error">
+                    <div class="validation-error">
                         {{ $message }}
-                    </span>
-
+                    </div>
                 @enderror
-
             </div>
 
-            <!-- OPTIONS -->
             <div class="form-options">
-
-                <a href="{{ route('admin.password.request') }}"
-                    class="forgot-password">
+                <a href="{{ route('admin.password.request') }}" class="forgot-password">
                     Forgot Password?
                 </a>
-
             </div>
 
-            <!-- BUTTON -->
-            <button type="submit"
-                    class="login-btn">
-
+            <button type="submit" class="login-btn">
                 Login
-
             </button>
-
         </form>
 
         <!-- FOOTER -->
