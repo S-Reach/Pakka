@@ -10,7 +10,7 @@ body{
     justify-content:center;
     align-items:center;
     padding:20px;
-    font-family:'Segoe UI',sans-serif;
+    font-family: 'Battambang', sans-serif;
     background:linear-gradient(135deg,#ede9fe,#f8fafc);
 }
 
@@ -115,6 +115,7 @@ input{
     background:#f9fafb;
     font-size:14px;
     transition:.25s;
+    font-family: 'Battambang', sans-serif;
 }
 
 input:focus{

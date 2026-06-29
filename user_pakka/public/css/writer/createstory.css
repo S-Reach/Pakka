@@ -79,6 +79,7 @@ select{
     border:1px solid #ddd;
     margin-bottom:12px;
     font-size:14px;
+    font-family: 'Battambang', sans-serif;
 }
 
 textarea{
@@ -247,6 +248,8 @@ input:checked + .slider:before{
     background:#eee;
     font-weight:600;
     transition:.2s;
+    font-family: 'Battambang', sans-serif;
+    font-size: 14px;
 }
 
 .btn:hover{

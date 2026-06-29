@@ -106,7 +106,7 @@
                     </div>
 
                     <div class="story-author">
-                        by {{ $story->user->username ?? 'Unknown' }}
+                        {{ __('ui.by') }} {{ $story->user->username ?? 'Unknown' }}
                     </div>
 
                     <div class="story-meta">
@@ -155,7 +155,7 @@
                     </div>
 
                     <div class="story-author">
-                        by {{ $story->user->username ?? 'Unknown' }}
+                        {{ __('ui.by') }} {{ $story->user->username ?? 'Unknown' }}
                     </div>
 
                     <div class="story-meta">
@@ -208,7 +208,7 @@
                     </div>
 
                     <div class="story-author">
-                        by {{ $story->user->username ?? 'Unknown' }}
+                        {{ __('ui.by') }} {{ $story->user->username ?? 'Unknown' }}
                     </div>
 
                     <div class="story-meta">
@@ -261,7 +261,7 @@
                     </div>
 
                     <div class="story-author">
-                        by {{ $story->user->username ?? 'Unknown' }}
+                        {{ __('ui.by') }} {{ $story->user->username ?? 'Unknown' }}
                     </div>
 
                     <div class="story-meta">

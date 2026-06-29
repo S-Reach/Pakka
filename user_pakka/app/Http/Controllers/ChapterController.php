@@ -35,6 +35,8 @@ class ChapterController extends Controller
 
         $chapter = new Chapter();
 
+        $chapter->chapter_number = Chapter::where('story_id', $storyId)->max('chapter_number') + 1 ?? 1;
+
         return view('writer.editchapter', compact('story', 'chapter'));
     }
 

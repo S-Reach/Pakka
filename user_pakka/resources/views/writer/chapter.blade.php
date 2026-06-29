@@ -19,15 +19,15 @@
             </div>
 
             <h2>
-                {{_('ui.story_submitted') }}
+                {{ __('ui.story_submitted') }}
             </h2>
 
             <p>
-                {{_('ui.chapter_published_successfully') }}
+                {{ __('ui.chapter_published_successfully') }}
             </p>
 
             <button onclick="closePopup()">
-                {{_('ui.okay') }}
+                {{ __('ui.okay') }}
             </button>
 
         </div>
@@ -39,7 +39,7 @@
     <div class="back">
 
         <a href="{{ route('writer.dashboard') }}">
-            ← {{ _('ui.back_to_dashboard') }}
+            ← {{ __('ui.back_to_dashboard') }}
         </a>
 
     </div>
@@ -49,7 +49,7 @@
     </div>
 
     <div class="subtitle">
-        {{_('ui.share_story_world') }}
+        {{ __('ui.share_story_world') }}
     </div>
 
     <div class="card">
@@ -58,7 +58,7 @@
 
             <div>
 
-                <h2>{{ _('ui.chapters') }}</h2>
+                <h2>{{ __('ui.chapters') }}</h2>
 
                 <small>
 
@@ -75,7 +75,7 @@
             <a href="{{ route('writer.chapter.create', $story->id) }}"
                class="btn-dark">
 
-               + {{ _('ui.new_chapter') }}
+               + {{ __('ui.new_chapter') }}
 
             </a>
 

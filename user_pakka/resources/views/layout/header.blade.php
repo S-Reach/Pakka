@@ -370,51 +370,35 @@
    MOBILE
 ========================= */
 
+/* hide on desktop */
+.mobile-auth {
+    display: none;
+}
+
+/* show only in mobile menu */
 @media(max-width:768px){
 
-    .pk-menu-toggle{
-        display:block;
+    .mobile-auth{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-top: 1px solid #eee;
+        margin-top: 10px;
+        padding-top: 10px;
     }
 
-    .pk-nav-links{
-
-        display:none;
-
-        position:absolute;
-
-        top:100%;
-        left:0;
-        right:0;
-
-        background:white;
-
-        flex-direction:column;
-
-        align-items:flex-start;
-
-        border-top:1px solid #eee;
-
-        box-shadow:
-            0 10px 25px
-            rgba(0,0,0,.08);
+    .mobile-auth a{
+        width: 100%;
+        padding: 14px 20px;
+        text-decoration: none;
+        color: #374151;
+        display: flex;
+        gap: 10px;
+        align-items: center;
     }
 
-    .pk-nav-links.show{
-        display:flex;
-    }
-
-    .pk-nav-links a{
-
-        width:100%;
-
-        padding:14px 20px;
-
-        border-radius:0;
-    }
-
-    .pk-profile-trigger i,
-    .pk-username{
-        display:none;
+    .mobile-auth a:hover{
+        background: #f3f4f6;
     }
 }
 
@@ -671,6 +655,20 @@
         </div>
 
         @endauth
+
+        @guest
+            <div class="mobile-auth">
+                <a href="/login">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    {{ __('ui.login') }}
+                </a>
+
+                <a href="/register">
+                    <i class="fa-solid fa-user-plus"></i>
+                    {{ __('ui.register') }}
+                </a>
+            </div>
+        @endguest
 
     </div>
 

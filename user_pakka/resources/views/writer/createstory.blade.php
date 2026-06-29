@@ -73,7 +73,7 @@
                     <input type="text"
                            name="title"
                            id="titleInput"
-                           placeholder="Story Title"
+                           placeholder="{{ __('ui.story_title') }}"
                            value="{{ old('title') }}"
                            required>
 

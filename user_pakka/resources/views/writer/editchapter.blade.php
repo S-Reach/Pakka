@@ -61,7 +61,7 @@
 
             {{-- TITLE --}}
             <label>
-                {{ _('ui.chapter_title') }}
+                {{ __('ui.chapter_title') }}
                 <span class="required">*</span>
             </label>
 
@@ -155,7 +155,7 @@
             {{-- SAVE --}}
             <button type="submit">
 
-                {{ $chapter->id ? __('ui.update_chapter') : __('ui.draft_chapter') }}
+                {{ $chapter->exists ? __('ui.update_chapter') : __('ui.draft_chapter') }}
 
             </button>
 
