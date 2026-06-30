@@ -347,58 +347,236 @@
 .lang-option:hover { background: #f1f5f9; }
 
 /* =========================
-   TABLET
+   LARGE DESKTOP
 ========================= */
+@media (min-width:1200px){
 
-@media(max-width:992px){
+    .pk-navbar{
+        padding:12px 32px;
+    }
 
-    .pk-username{
-        display:none;
+    .pk-logo-img{
+        width:50px;
+        height:50px;
+    }
+
+    .pk-logo span{
+        font-size:28px;
     }
 
     .pk-nav-links{
-        gap:6px;
+        gap:20px;
+    }
+
+    .pk-nav-links a{
+        font-size:15px;
+    }
+
+    .pk-menu-toggle{
+        display:none;
+    }
+
+    .mobile-auth{
+        display:none;
+    }
+}
+/* =========================
+   LAPTOP
+========================= */
+@media (min-width:992px) and (max-width:1199px){
+
+    .pk-navbar{
+        padding:12px 24px;
+    }
+
+    .pk-nav-links{
+        gap:12px;
+    }
+
+    .pk-nav-links a{
+        font-size:14px;
+        padding:8px 10px;
+    }
+
+    .pk-menu-toggle{
+        display:none;
+    }
+
+    .mobile-auth{
+        display:none;
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (min-width:768px) and (max-width:991px){
+
+    .pk-navbar{
+        padding:10px 18px;
+    }
+
+    .pk-logo-img{
+        width:42px;
+        height:42px;
+    }
+
+    .pk-logo span{
+        font-size:22px;
+    }
+
+    .pk-nav-links{
+        gap:8px;
     }
 
     .pk-nav-links a{
         font-size:13px;
         padding:6px 8px;
     }
-}
 
-/* =========================
-   MOBILE
-========================= */
+    .pk-username{
+        display:none;
+    }
 
-/* hide on desktop */
-.mobile-auth {
-    display: none;
-}
-
-/* show only in mobile menu */
-@media(max-width:768px){
+    .pk-menu-toggle{
+        display:none;
+    }
 
     .mobile-auth{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        border-top: 1px solid #eee;
-        margin-top: 10px;
-        padding-top: 10px;
+        display:none;
+    }
+}
+
+/* ===============================
+   MOBILE
+================================*/
+
+@media (max-width:768px){
+
+    .pk-navbar{
+        position:relative;
+        padding:12px 16px;
+    }
+
+    /* hide desktop nav */
+    .pk-nav-links{
+
+        display:none;
+
+        position:absolute;
+
+        top:100%;
+
+        left:0;
+
+        width:100%;
+
+        background:#fff;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        padding:10px 0;
+
+        border-top:1px solid #eee;
+
+        box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+        z-index:999;
+    }
+
+    .pk-nav-links.show{
+        display:flex;
+    }
+
+    .pk-nav-links a{
+
+        width:100%;
+
+        padding:14px 20px;
+
+        border-radius:0;
+    }
+
+    /* hamburger visible */
+    .pk-menu-toggle{
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        width:42px;
+
+        height:42px;
+
+        border:none;
+
+        background:none;
+
+        cursor:pointer;
+
+        font-size:24px;
+    }
+
+    /* desktop login/register hidden */
+    .pk-auth-buttons{
+
+        display:none;
+    }
+
+    /* language remains */
+    .lang-wrapper{
+        margin-right:8px;
+    }
+
+    /* mobile auth inside menu */
+    .mobile-auth{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        padding:16px;
+        gap:12px;
+        border-top:1px solid #eee;
     }
 
     .mobile-auth a{
-        width: 100%;
-        padding: 14px 20px;
-        text-decoration: none;
-        color: #374151;
-        display: flex;
-        gap: 10px;
-        align-items: center;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:8px;
+
+        width:85%;
+
+        padding:14px;
+
+        text-decoration:none;
+
+        border-radius:12px;
+
+        font-weight:600;
+
+        transition:.2s;
     }
 
-    .mobile-auth a:hover{
-        background: #f3f4f6;
+    .mobile-login{
+        background:#6366f1;
+        color:#fff !important;
+    }
+
+    .mobile-login:hover{
+        background:#4f46e5;
+    }
+
+    .mobile-register{
+        background:#6366f1;
+        color:#fff !important;
+    }
+
+    .mobile-register:hover{
+        background:#4f46e5;
     }
 }
 
@@ -446,10 +624,6 @@
             </div>
         </a>
 
-        <div class="pk-menu-toggle" onclick="pkToggleMenu()">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-
     </div>
 
     <div class="pk-nav-links" id="pkNavLinks">
@@ -473,6 +647,22 @@
             <i class="fa-solid fa-book"></i>
             {{ __('ui.library') }}
         </a>
+
+        @guest
+        <div class="mobile-auth">
+
+            <a href="/login" class="mobile-login">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                {{ __('ui.login') }}
+            </a>
+
+            <a href="/register" class="mobile-register">
+                <i class="fa-solid fa-user-plus"></i>
+                {{ __('ui.register') }}
+            </a>
+
+        </div>
+        @endguest
 
     </div>
 
@@ -565,6 +755,11 @@
         </div>
     </div>
 
+    <!-- Hamburger -->
+    <button class="pk-menu-toggle" onclick="pkToggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
         @auth
 
         @php
@@ -656,30 +851,34 @@
 
         @endauth
 
-        @guest
-            <div class="mobile-auth">
-                <a href="/login">
-                    <i class="fa-solid fa-right-to-bracket"></i>
-                    {{ __('ui.login') }}
-                </a>
-
-                <a href="/register">
-                    <i class="fa-solid fa-user-plus"></i>
-                    {{ __('ui.register') }}
-                </a>
-            </div>
-        @endguest
-
     </div>
 
 </div>
 
 <script>
 function pkToggleMenu() {
+
     document
-        .getElementById('pkNavLinks')
-        .classList.toggle('show');
+        .getElementById("pkNavLinks")
+        .classList.toggle("show");
+
 }
+
+document.addEventListener("click", function(e){
+
+    const menu = document.getElementById("pkNavLinks");
+    const toggle = document.querySelector(".pk-menu-toggle");
+
+    if(
+        menu &&
+        toggle &&
+        !menu.contains(e.target) &&
+        !toggle.contains(e.target)
+    ){
+        menu.classList.remove("show");
+    }
+
+});
 
 function pkToggleDropdown() {
 
