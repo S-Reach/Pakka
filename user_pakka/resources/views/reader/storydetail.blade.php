@@ -29,10 +29,9 @@
             <div class="cover">
 
                 @if($story->cover_image)
-                    <img src="{{ $story->cover_image ? asset('storage/'.$story->cover_image) : 'https://via.placeholder.com/300x400' }}">
+                    <img src="{{ $story->cover_image_url }}" alt="{{ $story->title }}">
                 @else
-                    <div class="story-placeholder">📚
-                    </div>
+                    <div class="story-placeholder">📚</div>
                 @endif
 
 
@@ -306,14 +305,10 @@
                         <div class="avatar">
 
                             @if($story->user && $story->user->avatar)
-
-                                <img src="{{ asset('storage/'.$story->user->avatar) }}"
-                                     style="width:100%;height:100%;object-fit:cover;">
-
+                                <img src="{{ $story->user->avatar_url }}"
+                                    style="width:100%;height:100%;object-fit:cover;">
                             @else
-
                                 {{ strtoupper(substr($story->user->name ?? 'A',0,1)) }}
-
                             @endif
 
                         </div>
@@ -481,14 +476,10 @@
 
                             <div class="comment-avatar">
                                 @if(Auth::user() && Auth::user()->avatar)
-
-                                    <img src="{{ asset('storage/'.Auth::user()->avatar) }}"
+                                    <img src="{{ Auth::user()->avatar_url }}"
                                         style="width:100%;height:100%;border-radius:50%;object-fit:cover;">
-
                                 @else
-
                                     {{ strtoupper(substr(Auth::user()->name ?? 'U',0,1)) }}
-
                                 @endif
                             </div>
 
@@ -520,7 +511,7 @@
                             <!-- AVATAR -->
                             <div class="comment-avatar gray-avatar">
                                 @if($comment->user->avatar)
-                                    <img src="{{ asset('storage/'.$comment->user->avatar) }}"
+                                    <img src="{{ $comment->user->avatar_url }}"
                                         style="width:100%;height:100%;border-radius:50%;object-fit:cover;">
                                 @else
                                     {{ strtoupper(substr($comment->user->name,0,1)) }}
@@ -676,7 +667,7 @@
                                     <div class="reply-box">
                                         <div class="comment-avatar small-avatar">
                                             @if($reply->user->avatar)
-                                                <img src="{{ asset('storage/'.$reply->user->avatar) }}"
+                                                <img src="{{ $reply->user->avatar_url }}"
                                                     style="width:100%;height:100%;border-radius:50%;object-fit:cover;">
                                             @else
                                                 {{ strtoupper(substr($reply->user->name,0,1)) }}

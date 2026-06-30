@@ -35,7 +35,7 @@
                 <div class="story-image">
 
                     @if($library->story->cover_image)
-                        <img src="{{ asset('storage/'.$library->story->cover_image) }}">
+                        <img src="{{ $library->story->cover_image_url }}">
                     @else
                         <div class="story-placeholder">📚</div>
                     @endif
@@ -88,7 +88,7 @@
                 <div class="story-image">
 
                     @if($story->cover_image)
-                        <img src="{{ asset('storage/'.$story->cover_image) }}">
+                        <img src="{{ $story->cover_image_url }}">
                     @else
                         <div class="story-placeholder">📚</div>
                     @endif
@@ -141,7 +141,7 @@
                 <div class="story-image">
 
                     @if($story->cover_image)
-                        <img src="{{ asset('storage/'.$story->cover_image) }}">
+                        <img src="{{ $story->cover_image_url }}">
                     @else
                         <div class="story-placeholder">📚</div>
                     @endif
@@ -190,7 +190,7 @@
                 <div class="story-image">
 
                     @if($story->cover_image)
-                        <img src="{{ asset('storage/'.$story->cover_image) }}">
+                        <img src="{{ $story->cover_image_url }}">
                     @else
                         <div class="story-placeholder">📚</div>
                     @endif
@@ -243,7 +243,7 @@
                 <div class="story-image">
 
                     @if($story->cover_image)
-                        <img src="{{ asset('storage/'.$story->cover_image) }}">
+                        <img src="{{ $story->cover_image_url }}">
                     @else
                         <div class="story-placeholder">📚</div>
                     @endif

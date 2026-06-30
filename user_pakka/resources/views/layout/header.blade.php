@@ -785,8 +785,8 @@
                  onclick="pkToggleDropdown()">
 
                 @if($user->avatar)
-                    <img src="{{ asset('storage/'.$user->avatar) }}"
-                         class="pk-profile">
+                    <img src="{{ $user->avatar_url }}"
+                        class="pk-profile">
                 @else
                     <div class="pk-profile pk-profile-letter">
                         {{ strtoupper(substr($user->username,0,1)) }}

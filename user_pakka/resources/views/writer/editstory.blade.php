@@ -208,8 +208,8 @@
                     <h3>{{ __('ui.live_preview') }}</h3>
 
                     <img id="previewCover"
-                         class="preview-img"
-                         src="{{ $story->cover_image ? asset('storage/'.$story->cover_image) : 'https://via.placeholder.com/300x400' }}">
+                        class="preview-img"
+                        src="{{ $story->cover_image ? $story->cover_image_url : 'https://via.placeholder.com/300x400' }}">
 
                     <p><strong>{{ __('ui.title') }}:</strong> <span id="previewTitle">{{ $story->title }}</span></p>
 

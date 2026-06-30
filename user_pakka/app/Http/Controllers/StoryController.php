@@ -81,7 +81,7 @@ class StoryController extends Controller
 
             $coverPath = $request
                 ->file('cover_image')
-                ->store('covers', 'public');
+                ->store('covers', 'spaces');
         }
 
         // CREATE STORY
@@ -193,7 +193,7 @@ class StoryController extends Controller
         $coverPath = $story->cover_image;
 
         if ($request->hasFile('cover_image')) {
-            $coverPath = $request->file('cover_image')->store('covers', 'public');
+            $coverPath = $request->file('cover_image')->store('covers', 'spaces');
         }
 
         $story->update([

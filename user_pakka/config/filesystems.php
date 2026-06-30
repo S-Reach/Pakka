@@ -56,6 +56,20 @@ return [
             'throw' => false,
         ],
 
+        'spaces' => [
+            'driver' => 's3',
+            'key' => env('DO801T6CJU6C9MZR8QZ6'),
+            'secret' => env('4WzblN1DhkYQ1Q8NynrE6IuI8w5PVQO7LCUTjudxwIk'),
+            'region' => env('sgp1'),
+            'bucket' => env('pakka-storage'),
+            'url' => env('https://pakka-storage.sgp1.digitaloceanspaces.com'),
+            'endpoint' => env('https://sgp1.digitaloceanspaces.com'),
+            'use_path_style_endpoint' => false,
+            'visibility' => 'public',
+            'throw' => false,
+            
+        ],
+
     ],
 
     /*

@@ -22,7 +22,7 @@
             <div class="profile-card">
                 <div class="avatar">
                     @if($user->avatar)
-                        <img id="avatarPreview" src="{{ asset('storage/'.$user->avatar) }}">
+                        <img id="avatarPreview" src="{{ $user->avatar_url }}">
                     @else
                         <div class="avatar-placeholder">
                             {{ strtoupper(substr($user->name, 0, 1)) }}

@@ -15,7 +15,7 @@
 
             <div class="avatar">
                 @if(!empty($user->avatar))
-                    <img src="{{ asset('storage/'.$user->avatar) }}"
+                    <img src="{{ asset( $user->avatar_url }}"
                         alt="Avatar"
                         class="avatar-img">
                 @else
@@ -74,7 +74,7 @@
                     <div class="story-card">
                         @if($story->cover_image)
                             <div class="story-cover">
-                                <img src="{{ asset('storage/'.$story->cover_image) }}">
+                                <img src="{{ $story->cover_image_url }}">
                             </div>
                         @else
                             <div class="story-cover">

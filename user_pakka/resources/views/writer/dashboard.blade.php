@@ -113,14 +113,13 @@
             <div class="left">
 
                 @if($story->cover_image)
-                    <img src="{{ $story->cover_image ? asset('storage/'.$story->cover_image) : 'https://via.placeholder.com/80' }}"
+                    <img src="{{ $story->cover_image_url }}"
                         class="cover">
                 @else
                     <div class="cover">
                         <div style="font-size:45px;">📚</div>
                     </div>
                 @endif
-
                 <div>
                     <div class="title">{{ $story->title }}</div>
 

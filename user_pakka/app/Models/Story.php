@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 use App\Models\Chapter;
 use App\Models\MyLibrary;
@@ -89,6 +90,14 @@ class Story extends Model
     public function reports()
     {
         return $this->hasMany(StoryReport::class);
+    }
+
+    public function getCoverImageUrlAttribute()
+    {
+        if ($this->cover_image) {
+            return Storage::disk('spaces')->url($this->cover_image);
+        }
+        return null;
     }
     
 }

@@ -33,7 +33,7 @@ class UserProfileController extends Controller
         ]);
 
         if ($request->hasFile('avatar')) {
-            $path = $request->file('avatar')->store('avatars', 'public');
+            $path = $request->file('avatar')->store('avatars', 'spaces');
             $user->avatar = $path;
         }
 

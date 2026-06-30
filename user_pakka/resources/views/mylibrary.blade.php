@@ -49,7 +49,7 @@
                             @endif
 
                             @if($story->cover_image)
-                                <img src="{{ asset('storage/' . $story->cover_image) }}">
+                                <img src="{{ $story->cover_image_url }}">
                             @else
                                 <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:#e5e7eb;">
                                     <div style="font-size:50px;">📚</div>
@@ -112,7 +112,7 @@
                         <div class="card-image">
 
                             @if($story->cover_image)
-                                <img src="{{ asset('storage/' . $story->cover_image) }}">
+                                <img src="{{ $story->cover_image_url }}">
                             @else
                                 <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:#e5e7eb;">
                                     <div style="font-size:50px;">📚</div>

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Comment;
 use App\Models\MyLibrary;
 use App\Models\ReadingPreference;
@@ -108,5 +109,13 @@ class User extends Authenticatable
     public function isSuspended()
     {
         return $this->suspended_at !== null;
+    }
+
+    public function getAvatarUrlAttribute()
+    {
+        if ($this->avatar) {
+            return Storage::disk('spaces')->url($this->avatar);
+        }
+        return null;
     }
 }
