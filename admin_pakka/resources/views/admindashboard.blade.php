@@ -112,7 +112,7 @@
                     <div style="display:flex;align-items:center;gap:12px;">
 
                         @if($story->user && $story->user->avatar)
-                            <img src="{{ asset('storage/'.$story->user->avatar) }}">
+                            <img src="{{ $story->user->avatar_url }}">
                         @else
                             <img src="https://ui-avatars.com/api/?name={{ urlencode($story->user->name ?? 'User') }}">
                         @endif
